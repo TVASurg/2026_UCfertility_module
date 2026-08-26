@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ulcerative colitis and fertility patient learning module</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-1 col-lg-2"></div><!-- spacer -->
+            
+            <div class="col-md-10 col-lg-8"><h2 class="text-center mt-3 mb-5">Ulcerative colitis/fertility patient learning module</h2>
+            
+            <div id="question_01">
+            <div class="row justify-content-center text-center">
+            <div class="col"><h4>Which part of the pregnancy journey would you like to learn about? </h4></div>
+            </div>
+            <div class="row justify-content-center text-center">
+                <div class="card-group">
+                <div class="card">
+                    <a href="#" onclick="showSection(`question_02`);hideSection(`question_01`); showBreadCrumb(`pregnancyDropdown`,`Before pregnancy`); changePchoice(0)">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                    <p class="card-title">Before pregnancy</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="#" onclick="showSection(`question_02`);hideSection(`question_01`); showBreadCrumb(`pregnancyDropdown`,`Pregnant`); changePchoice(2)">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                    <p class="card-title">Pregnant</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="#" onclick="showSection(`question_02`);hideSection(`question_01`); showBreadCrumb(`pregnancyDropdown`,`After pregnancy`); changePchoice(2)">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                    <p class="card-title">After pregnancy</p>
+                    </div>
+                    </a>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <div id="question_02">
+            <div class="row justify-content-center text-center">
+                <div class="col"><h4>Have you had any surgeries to treat your ulcerative colitis? </h4></div>
+            </div>
+            <div class="row justify-content-center text-center">
+                <div class="card-group">
+                <div class="card">
+                    <a href="#" onclick="showSection(`mainContent`);hideSection(`question_02`); showBreadCrumb(`SurgeryDropdown`,`No surgery yet`); changeSchoice(0)">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                    <p class="card-title">No</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="#" onclick="showSection(`question_03`);hideSection(`question_02`)">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                    <p class="card-title">At least 1</p>
+                    </div>
+                    </a>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <div id="question_03">
+            <div class="row justify-content-center text-center">
+                <div class="col"><h4>If you’ve had surgery to treat ulcerative colitis, which surgery have you had? </h4></div>
+            </div>
+            <div class="row justify-content-center text-center">
+                <div class="card-group">
+                    <div class="card">
+                    <a href="#" onclick="showSection(`mainContent`);hideSection(`question_03`); showBreadCrumb(`SurgeryDropdown`,`Colon completely removed, have end ostomy`); changeSchoice(1)">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                    <p class="card-title">Colon completely removed,<br/> have end ostomy</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="#" onclick="showSection(`mainContent`);hideSection(`question_03`); showBreadCrumb(`SurgeryDropdown`,`Colon completely removed, have end ileostomy`); changeSchoice(2)">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                    <p class="card-title">Colon completely removed,<br/> have end ileostomy</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="#" onclick="showSection(`mainContent`);hideSection(`question_03`); showBreadCrumb(`SurgeryDropdown`,`J pouch made, have a diverting/loop ileostomy`); changeSchoice(3)">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                    <p class="card-title">J pouch made, <br/>have a diverting or “loop” ileostomy 
+</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="#" onclick="showSection(`mainContent`);hideSection(`question_03`); showBreadCrumb(`SurgeryDropdown`,`J pouch completed, ileostomy closed`); changeSchoice(4)">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <div class="card-body">
+                    <p class="card-title">J pouch completed,<br/> ileostomy closed
+</p>
+                    </div>
+                    </a>
+                </div>
+                </div>
+                
+            </div>
+            </div>
+
+            <div id="mainContent">
+            <div class="row">
+                <div class="col">
+                <div class="btn-group mb-3" role="pregnancy group" aria-label="Pregnancy question dropdown">
+
+                <div class="btn-group" role="pregnancy group">
+                    <button id="pregnancyDropdown"type="button" class="btn btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#" onclick="showBreadCrumb(`pregnancyDropdown`,`Before pregnancy`); changePchoice(0)">Before Pregnancy</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="showBreadCrumb(`pregnancyDropdown`,`Pregnant`); changePchoice(1)">Pregnant</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="showBreadCrumb(`pregnancyDropdown`,`After pregnancy`); changePchoice(2)">After Pregnancy</a></li>
+                    </ul>
+                </div>
+                </div>
+
+                <div class="btn-group mb-3" role="Surgery group" aria-label="Surgery question dropdown">
+
+                <div class="btn-group" role="Surgery group">
+                    <button id="SurgeryDropdown"type="button" class="btn btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#" onclick="showBreadCrumb(`SurgeryDropdown`,`No surgery yet`); changeSchoice(0)">No surgery yet</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="showBreadCrumb(`SurgeryDropdown`,`Colon completely removed, have end ostomy`); changeSchoice(1)">Colon completely removed, have end ostomy</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="showBreadCrumb(`SurgeryDropdown`,`Colon completely removed, have end ileostomy`); changeSchoice(2)">Colon completely removed, have end ileostomy</a></li>                    
+                    <li><a class="dropdown-item" href="#" onclick="showBreadCrumb(`SurgeryDropdown`,`J pouch made, have a diverting/loop ileostomy`); changeSchoice(3)">J pouch made, have a diverting/loop ileostomy</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="showBreadCrumb(`SurgeryDropdown`,`J pouch completed, ileostomy closed`); changeSchoice(4)">J pouch completed, ileostomy closed</a></li>                                        
+
+                    </ul>
+                </div>
+                </div>
+
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 text-center">
+            <div class="col">
+                <a href="#" onclick="showCarousel(1)"><div class="card h-100">
+                <!-- <img src="..." class="card-img-top" alt="..."> -->
+                <div class="card-body">
+                    <p id="mainContent_01_header" class="card-title">Card title</p>
+                    <p id="mainContent_01_debug" class="small"style="color:rosybrown"></p>
+                </div>
+                </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#" onclick="showCarousel(2)"><div id="mainContent_02" class="card h-100">
+                <!-- <img src="..." class="card-img-top" alt="..."> -->
+                <div class="card-body">
+                    <p id="mainContent_02_header" class="card-title">Card title</p>
+                    <p id="mainContent_02_debug" class="small"style="color:rosybrown"></p>
+                </div>
+                </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#" onclick="showCarousel(3)"><div id="mainContent_03" class="card h-100">
+                <!-- <img src="..." class="card-img-top" alt="..."> -->
+                <div class="card-body">
+                    <p id="mainContent_03_header" class="card-title">Card title</p>
+                    <p id="mainContent_03_debug" class="small"style="color:rosybrown"></p>
+                </div>
+                </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#" onclick="showCarousel(4)"><div id="mainContent_04" class="card h-100">
+                <!-- <img src="..." class="card-img-top" alt="..."> -->
+                <div class="card-body">
+                    <p id="mainContent_04_header" class="card-title">Card title</p>
+                    <p id="mainContent_04_debug" class="small" style="color:rosybrown"></p>
+                </div>
+                </div>
+                </a>
+            </div>
+            </div>
+            </div>
+            
+            <div id="contentCarousel" class="carousel slide">
+            <h3 id="carouselHeader" class="text-center">Header</h1>
+            <!-- <div class="carousel-indicators">
+                <button type="button" data-bs-target="#contentCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#contentCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#contentCarousel" data-bs-slide-to="2" aria-label="Slide 3" class="d-none"></button>
+            </div> -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <div class="card h-100">
+                <img src="images/placeholder.png" class="card-img-top" alt="Card 1">
+                <div class="card-body">
+                <h5 class="card-title">Card Title 1</h5>
+                <p class="card-text">Short descriptive text goes here.</p>
+                </div>
+                </div>
+                </div>
+                <div class="carousel-item">
+                <div class="card h-100">
+                <img src="images/placeholder.png" class="card-img-top" alt="Card 2">
+                <div class="card-body">
+                <h5 class="card-title">Card Title 2</h5>
+                <p class="card-text">Short descriptive text goes here.</p>
+                </div>
+                </div>
+                </div>
+                <div class="carousel-item">
+                <div class="card h-100">
+                <img src="images/placeholder.png" class="card-img-top" alt="Card 3">
+                <div class="card-body">
+                <h5 class="card-title">Card Title 3</h5>
+                <p class="card-text">Short descriptive text goes here.</p>
+                </div>
+                </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#contentCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#contentCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            </div>
+            
+            </div><!-- main md-10 column -->
+            
+            <div class="col-md-1 col-lg-2"></div><!-- spacer -->
+            </div>
+
+
+
+    </div>
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            init();
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
