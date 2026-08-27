@@ -1,7 +1,19 @@
 {
   "allEntries":[
     {
-    "categoryCode" : "01a0",
+    "nodeID" : "0000",
+    "exitNodes":[],
+    "heading": "dummy node",
+    "content": 
+    {
+    },
+    "media":
+    {
+    }
+    },
+    {
+    "nodeID" : "01a0",
+    "exitNodes":["01b0"],
     "heading": "Introduction",
     "content": 
     {
@@ -28,8 +40,9 @@
     }
     },
     {
-    "categoryCode" : "01b0",
-    "heading": "Disease and Symptoms",
+    "nodeID" : "01b0",
+    "exitNodes":["01c1","03a0"],
+    "heading": "UC Disease and Symptoms",
     "content": 
     {
         "slide01":
@@ -55,7 +68,8 @@
     }
     },
     {
-    "categoryCode" : "01c0",
+    "nodeID" : "01c0",
+    "exitNodes":[],
     "heading": "Anatomy",
     "content": 
     {
@@ -82,34 +96,8 @@
     }
     },
     {
-    "categoryCode" : "XXX",
-    "heading": "",
-    "content": 
-    {
-        "slide01":
-        [
-            "",
-            "",
-            [
-                "",
-                ""
-            ]
-        ],
-        "slide02":
-        [
-            "",
-            "",
-            ""
-        ]
-    },
-    "media":
-    {
-        "slide01":"",
-        "slide02":""
-    }
-    },
-    {
-    "categoryCode" : "01c1",
+    "nodeID" : "01c1",
+    "exitNodes":["01c2"],
     "heading": "The Digestive Tract",
     "content": 
     {
@@ -136,7 +124,8 @@
     }
     },
     {
-    "categoryCode" : "01c2",
+    "nodeID" : "01c2",
+    "exitNodes":[],
     "heading": "Female Reproductive Anatomy",
     "content": 
     {
@@ -163,8 +152,9 @@
     }
     },
     {
-    "categoryCode" : "02a0",
-    "heading": "Surgery (no prior)",
+    "nodeID" : "02a0",
+    "exitNodes":["02a1","02a2","02b0","02c2","07c0"],
+    "heading": "No Prior UC surgery",
     "content": 
     {
         "slide01":
@@ -190,8 +180,9 @@
     }
     },            
     {
-    "categoryCode" : "02a1",
-    "heading": "Surgery: J-pouch overview",
+    "nodeID" : "02a1",
+    "exitNodes":["02a2"],
+    "heading": "J-pouch overview",
     "content": 
     {
         "slide01":
@@ -217,8 +208,9 @@
     }
     },    
     {
-    "categoryCode" : "02a2",
-    "heading": "Surgery: Pre and Post",
+    "nodeID" : "02a2",
+    "exitNodes":["02b0","02c0","04a0","05a0","06a0","02d0"],
+    "heading": "Pre and Post surgery",
     "content": 
     {
         "slide01":
@@ -244,8 +236,9 @@
     }
     },
     {
-    "categoryCode" : "02c0",
-    "heading": "Surgery: Total proctocolectomy, end ostomy",
+    "nodeID" : "02b0",
+    "exitNodes":["02b1","02b2","07b0"],
+    "heading": "Complete colon removal surgery",
     "content": 
     {
         "slide01":
@@ -271,8 +264,9 @@
     }
     },
     {
-    "categoryCode" : "02c1",
-    "heading": "Before Pregnancy",
+    "nodeID" : "02b1",
+    "exitNodes":["04f0","04b0","05b0"],
+    "heading": "Complete colon removal surgery: Before Pregnancy",
     "content": 
     {
         "slide01":
@@ -298,8 +292,9 @@
     }
     },
     {
-    "categoryCode" : "02c2",
-    "heading": "Pregnant",
+    "nodeID" : "02b2",
+    "exitNodes":["05b0","06b0"],
+    "heading": "Complete colon removal surgery: Pregnant",
     "content": 
     {
         "slide01":
@@ -325,8 +320,9 @@
     }
     },
     {
-    "categoryCode" : "02d0",
-    "heading": "Surgery: Subtotal colectomy, end ileostomy",
+    "nodeID" : "02c0",
+    "exitNodes":["02ci","02cii"],
+    "heading": "Partial colon removal surgery",
     "content": 
     {
         "slide01":
@@ -352,8 +348,9 @@
     }
     },
     {
-    "categoryCode" : "02d1",
-    "heading": "J-pouch option",
+    "nodeID" : "02ci",
+    "exitNodes":["02cii","02ciii"],
+    "heading": "J pouch option",
     "content": 
     {
         "slide01":
@@ -379,7 +376,8 @@
     }
     },
     {
-    "categoryCode" : "02d2",
+    "nodeID" : "02cii",
+    "exitNodes":["02ci","02ciii"],
     "heading": "End ostomy option",
     "content": 
     {
@@ -406,8 +404,9 @@
     }
     },
     {
-    "categoryCode" : "02d3",
-    "heading": "Before Pregnancy",
+    "nodeID" : "02ciii",
+    "exitNodes":["02c1","02c2","07c0"],
+    "heading": "Either option (J pouch or end ostomy)",
     "content": 
     {
         "slide01":
@@ -433,8 +432,9 @@
     }
     },
     {
-    "categoryCode" : "02d4",
-    "heading": "Pregnant",
+    "nodeID" : "02c1",
+    "exitNodes":["02d0","04c0","04f0"],
+    "heading": "Partial colon removal surgery: Before Pregnancy",
     "content": 
     {
         "slide01":
@@ -460,8 +460,9 @@
     }
     },
     {
-    "categoryCode" : "02e0",
-    "heading": "Surgery: J-pouch creation, loop ileostomy",
+    "nodeID" : "02c2",
+    "exitNodes":["05c0","06c0"],
+    "heading": "Partial colon removal surgery: Pregnant",
     "content": 
     {
         "slide01":
@@ -487,8 +488,9 @@
     }
     },
     {
-    "categoryCode" : "02e1",
-    "heading": "Before Pregnancy",
+    "nodeID" : "02d0",
+    "exitNodes":["02d1","02d2","07d0"],
+    "heading": "J pouch creation surgery",
     "content": 
     {
         "slide01":
@@ -514,8 +516,9 @@
     }
     },
     {
-    "categoryCode" : "02e2",
-    "heading": "Pregnant",
+    "nodeID" : "02d1",
+    "exitNodes":["02e0", "04d0", "04f0"],
+    "heading": "J pouch creation: Before Pregnancy",
     "content": 
     {
         "slide01":
@@ -541,8 +544,9 @@
     }
     },
     {
-    "categoryCode" : "02f0",
-    "heading": "Surgery: J-pouch completion, ostomy closed",
+    "nodeID" : "02d2",
+    "exitNodes":["05d0", "06d0"],
+    "heading": "J pouch creation: Pregnant",
     "content": 
     {
         "slide01":
@@ -568,8 +572,9 @@
     }
     },
     {
-    "categoryCode" : "02f1",
-    "heading": "Before Pregnancy",
+    "nodeID" : "02e0",
+    "exitNodes":["02e1","02e2","07d0"],
+    "heading": "J pouch completion surgery",
     "content": 
     {
         "slide01":
@@ -595,8 +600,9 @@
     }
     },
     {
-    "categoryCode" : "02f2",
-    "heading": "Pregnant",
+    "nodeID" : "02e1",
+    "exitNodes":["04e0","04f0","05e0"],
+    "heading": "J pouch completion: Before Pregnancy",
     "content": 
     {
         "slide01":
@@ -622,7 +628,36 @@
     }
     },
     {
-    "categoryCode" : "03a0",
+    "nodeID" : "02e2",
+    "exitNodes":["05e0","06d0"],
+    "heading": "J pouch completion: Pregnant",
+    "content": 
+    {
+        "slide01":
+        [
+            "",
+            "",
+            [
+                "",
+                ""
+            ]
+        ],
+        "slide02":
+        [
+            "",
+            "",
+            ""
+        ]
+    },
+    "media":
+    {
+        "slide01":"",
+        "slide02":""
+    }
+    },
+    {
+    "nodeID" : "03a0",
+    "exitNodes":["08a0", "08b0", "08c0","09a0"],
     "heading": "Medications",
     "content": 
     {
@@ -649,8 +684,9 @@
     }
     },
     {
-    "categoryCode" : "04a0",
-    "heading": "Fertility Considerations: No UC surgery",
+    "nodeID" : "04a0",
+    "exitNodes":["04f0","05a0","08a0"],
+    "heading": "Fertility considerations: No UC surgery",
     "content": 
     {
         "slide01":
@@ -676,8 +712,9 @@
     }
     },
     {
-    "categoryCode" : "04b0",
-    "heading": "Fertility: No pelvic surgery",
+    "nodeID" : "04b0",
+    "exitNodes":["04f0","05b0","08b0"],
+    "heading": "Fertility: Total proctocolectomy",
     "content": 
     {
         "slide01":
@@ -703,8 +740,9 @@
     }
     },
     {
-    "categoryCode" : "04c0",
-    "heading": "Fertility: Pelvic surgery",
+    "nodeID" : "04c0",
+    "exitNodes":["04f0","05c0","06a0","08a0"],
+    "heading": "Fertility: Subtotal colectomy",
     "content": 
     {
         "slide01":
@@ -730,8 +768,9 @@
     }
     },
     {
-    "categoryCode" : "04d0",
-    "heading": "ART/IVF treatments",
+    "nodeID" : "04d0",
+    "exitNodes":["04f0","05d0","08c0"],
+    "heading": "Fertility: J pouch with ostomy",
     "content": 
     {
         "slide01":
@@ -757,8 +796,9 @@
     }
     },
     {
-    "categoryCode" : "05a0",
-    "heading": "Pregnancy Considerations: No UC surgery",
+    "nodeID" : "04e0",
+    "exitNodes":["04f0","05e0","08c0"],
+    "heading": "Fertility: J pouch complete",
     "content": 
     {
         "slide01":
@@ -784,8 +824,9 @@
     }
     },
     {
-    "categoryCode" : "05b0",
-    "heading": "Pregnancy: No pelvic surgery",
+    "nodeID" : "04f0",
+    "exitNodes":[],
+    "heading": "In Vitro fertilization",
     "content": 
     {
         "slide01":
@@ -811,8 +852,9 @@
     }
     },
     {
-    "categoryCode" : "05c0",
-    "heading": "Pregnancy: Pelvic surgery",
+    "nodeID" : "05a0",
+    "exitNodes":["06a0","07a0","08a0"],
+    "heading": "Pregnancy considerations: No UC surgery",
     "content": 
     {
         "slide01":
@@ -837,9 +879,10 @@
         "slide02":""
     }
     },
-        {
-    "categoryCode" : "06a0",
-    "heading": "Delivery: No UC surgery/no pelvic",
+    {
+    "nodeID" : "05b0",
+    "exitNodes":["06b0","07b0","08b0"],
+    "heading": "Pregnancy: Total proctocolectomy",
     "content": 
     {
         "slide01":
@@ -864,9 +907,10 @@
         "slide02":""
     }
     },
-        {
-    "categoryCode" : "06b0",
-    "heading": "Delivery: Pelvic surgery (total proctocolectomy)",
+    {
+    "nodeID" : "05c0",
+    "exitNodes":["06c0","07c0","08b0"],
+    "heading": "Pregnancy: Subtotal colectomy",
     "content": 
     {
         "slide01":
@@ -891,9 +935,10 @@
         "slide02":""
     }
     },
-        {
-    "categoryCode" : "06c0",
-    "heading": "Delivery: Pelvic surgery (J-pouch)",
+    {
+    "nodeID" : "05d0",
+    "exitNodes":["06d0","07d0","08c0"],
+    "heading": "Pregnancy: J pouch with ostomy",
     "content": 
     {
         "slide01":
@@ -918,63 +963,10 @@
         "slide02":""
     }
     },
-        {
-    "categoryCode" : "07a0",
-    "heading": "Postpartum: No UC surgery",
-    "content": 
     {
-        "slide01":
-        [
-            "",
-            "",
-            [
-                "",
-                ""
-            ]
-        ],
-        "slide02":
-        [
-            "",
-            "",
-            ""
-        ]
-    },
-    "media":
-    {
-        "slide01":"",
-        "slide02":""
-    }
-    },
-        {
-    "categoryCode" : "07b0",
-    "heading": "Postpartum: Subtotal colectomy",
-    "content": 
-    {
-        "slide01":
-        [
-            "",
-            "",
-            [
-                "",
-                ""
-            ]
-        ],
-        "slide02":
-        [
-            "",
-            "",
-            ""
-        ]
-    },
-    "media":
-    {
-        "slide01":"",
-        "slide02":""
-    }
-    },
-        {
-    "categoryCode" : "07c0",
-    "heading": "Postpartum: J-pouch",
+    "nodeID" : "05e0",
+    "exitNodes":["06d0","07d0","08c0"],
+    "heading": "Pregnancy: J pouch completed",
     "content": 
     {
         "slide01":
@@ -1000,7 +992,148 @@
     }
     },
         {
-    "categoryCode" : "07d0",
+    "nodeID" : "06a0",
+    "exitNodes":[],
+    "heading": "Delivery considerations: No UC surgery",
+    "content": 
+    {
+        "slide01":
+        [
+            "",
+            "",
+            [
+                "",
+                ""
+            ]
+        ],
+        "slide02":
+        [
+            "",
+            "",
+            ""
+        ]
+    },
+    "media":
+    {
+        "slide01":"",
+        "slide02":""
+    }
+    },
+        {
+    "nodeID" : "06b0",
+    "exitNodes":[],
+    "heading": "Delivery: Total proctocolectomy",
+    "content": 
+    {
+        "slide01":
+        [
+            "",
+            "",
+            [
+                "",
+                ""
+            ]
+        ],
+        "slide02":
+        [
+            "",
+            "",
+            ""
+        ]
+    },
+    "media":
+    {
+        "slide01":"",
+        "slide02":""
+    }
+    },
+    {
+    "nodeID" : "06c0",
+    "exitNodes":[],
+    "heading": "Delivery: Subtotal colectomy",
+    "content": 
+    {
+        "slide01":
+        [
+            "",
+            "",
+            [
+                "",
+                ""
+            ]
+        ],
+        "slide02":
+        [
+            "",
+            "",
+            ""
+        ]
+    },
+    "media":
+    {
+        "slide01":"",
+        "slide02":""
+    }
+    },
+    {
+    "nodeID" : "06d0",
+    "exitNodes":[],
+    "heading": "Delivery: J pouch",
+    "content": 
+    {
+        "slide01":
+        [
+            "",
+            "",
+            [
+                "",
+                ""
+            ]
+        ],
+        "slide02":
+        [
+            "",
+            "",
+            ""
+        ]
+    },
+    "media":
+    {
+        "slide01":"",
+        "slide02":""
+    }
+    },
+    {
+    "nodeID" : "07a0",
+    "exitNodes":["08a0"],
+    "heading": "Postpartum considerations: No UC surgery",
+    "content": 
+    {
+        "slide01":
+        [
+            "",
+            "",
+            [
+                "",
+                ""
+            ]
+        ],
+        "slide02":
+        [
+            "",
+            "",
+            ""
+        ]
+    },
+    "media":
+    {
+        "slide01":"",
+        "slide02":""
+    }
+    },
+        {
+    "nodeID" : "07b0",
+    "exitNodes":["08b0"],
     "heading": "Postpartum: Total proctocolectomy",
     "content": 
     {
@@ -1027,8 +1160,9 @@
     }
     },
         {
-    "categoryCode" : "08a0",
-    "heading": "Planning and Support: No surgery/unsure/no deep pelvic",
+    "nodeID" : "07c0",
+    "exitNodes":["08b0"],
+    "heading": "Postpartum: Subtotal colectomy",
     "content": 
     {
         "slide01":
@@ -1054,7 +1188,64 @@
     }
     },
         {
-    "categoryCode" : "08b0",
+    "nodeID" : "07d0",
+    "exitNodes":["08c0"],
+    "heading": "Postpartum: J pouch",
+    "content": 
+    {
+        "slide01":
+        [
+            "",
+            "",
+            [
+                "",
+                ""
+            ]
+        ],
+        "slide02":
+        [
+            "",
+            "",
+            ""
+        ]
+    },
+    "media":
+    {
+        "slide01":"",
+        "slide02":""
+    }
+    },
+        {
+    "nodeID" : "08a0",
+    "exitNodes":["09b0"],
+    "heading": "Planning and Support: No surgery/no deep pelvic surgery",
+    "content": 
+    {
+        "slide01":
+        [
+            "",
+            "",
+            [
+                "",
+                ""
+            ]
+        ],
+        "slide02":
+        [
+            "",
+            "",
+            ""
+        ]
+    },
+    "media":
+    {
+        "slide01":"",
+        "slide02":""
+    }
+    },
+        {
+    "nodeID" : "08b0",
+    "exitNodes":["09a0"],
     "heading": "Planning and Support: With ostomy",
     "content": 
     {
@@ -1081,7 +1272,8 @@
     }
     },
         {
-    "categoryCode" : "08c0",
+    "nodeID" : "08c0",
+    "exitNodes":["09b0"],
     "heading": "Planning and Support: With J-pouch",
     "content": 
     {
@@ -1108,7 +1300,8 @@
     }
     },
         {
-    "categoryCode" : "09a0",
+    "nodeID" : "09a0",
+    "exitNodes":["09b0"],
     "heading": "What to ask your care team",
     "content": 
     {
@@ -1135,7 +1328,8 @@
     }
     },
         {
-    "categoryCode" : "09b0",
+    "nodeID" : "09b0",
+    "exitNodes":[],
     "heading": "Patient resources",
     "content": 
     {
@@ -1162,7 +1356,8 @@
     }
     },
         {
-    "categoryCode" : "10a0",
+    "nodeID" : "10a0",
+    "exitNodes":[],
     "heading": "Question list: Preconception planning",
     "content": 
     {
@@ -1189,7 +1384,8 @@
     }
     },
         {
-    "categoryCode" : "10b0",
+    "nodeID" : "10b0",
+    "exitNodes":[],
     "heading": "Question list: While pregnant",
     "content": 
     {

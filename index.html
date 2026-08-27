@@ -56,7 +56,7 @@
             <div class="row justify-content-center text-center">
                 <div class="card-group">
                 <div class="card">
-                    <a href="#" onclick="showSection(`mainContent`);hideSection(`question_02`); showBreadCrumb(`SurgeryDropdown`,`No surgery yet`); changeSchoice(0)">
+                    <a href="#" onclick="showSection(`mainMenu`);hideSection(`question_02`); showBreadCrumb(`SurgeryDropdown`,`No surgery yet`); changeSchoice(0)">
                     <!-- <img src="..." class="card-img-top" alt="..."> -->
                     <div class="card-body">
                     <p class="card-title">No</p>
@@ -82,7 +82,7 @@
             <div class="row justify-content-center text-center">
                 <div class="card-group">
                     <div class="card">
-                    <a href="#" onclick="showSection(`mainContent`);hideSection(`question_03`); showBreadCrumb(`SurgeryDropdown`,`Colon completely removed, have end ostomy`); changeSchoice(1)">
+                    <a href="#" onclick="showSection(`mainMenu`);hideSection(`question_03`); showBreadCrumb(`SurgeryDropdown`,`Colon completely removed, have end ostomy`); changeSchoice(1)">
                     <!-- <img src="..." class="card-img-top" alt="..."> -->
                     <div class="card-body">
                     <p class="card-title">Colon completely removed,<br/> have end ostomy</p>
@@ -90,15 +90,15 @@
                     </a>
                 </div>
                 <div class="card">
-                    <a href="#" onclick="showSection(`mainContent`);hideSection(`question_03`); showBreadCrumb(`SurgeryDropdown`,`Colon completely removed, have end ileostomy`); changeSchoice(2)">
+                    <a href="#" onclick="showSection(`mainMenu`);hideSection(`question_03`); showBreadCrumb(`SurgeryDropdown`,`Colon partially removed, have end ileostomy`); changeSchoice(2)">
                     <!-- <img src="..." class="card-img-top" alt="..."> -->
                     <div class="card-body">
-                    <p class="card-title">Colon completely removed,<br/> have end ileostomy</p>
+                    <p class="card-title">Colon partially removed,<br/> have end ileostomy</p>
                     </div>
                     </a>
                 </div>
                 <div class="card">
-                    <a href="#" onclick="showSection(`mainContent`);hideSection(`question_03`); showBreadCrumb(`SurgeryDropdown`,`J pouch made, have a diverting/loop ileostomy`); changeSchoice(3)">
+                    <a href="#" onclick="showSection(`mainMenu`);hideSection(`question_03`); showBreadCrumb(`SurgeryDropdown`,`J pouch made, have a diverting/loop ileostomy`); changeSchoice(3)">
                     <!-- <img src="..." class="card-img-top" alt="..."> -->
                     <div class="card-body">
                     <p class="card-title">J pouch made, <br/>have a diverting or “loop” ileostomy 
@@ -107,7 +107,7 @@
                     </a>
                 </div>
                 <div class="card">
-                    <a href="#" onclick="showSection(`mainContent`);hideSection(`question_03`); showBreadCrumb(`SurgeryDropdown`,`J pouch completed, ileostomy closed`); changeSchoice(4)">
+                    <a href="#" onclick="showSection(`mainMenu`);hideSection(`question_03`); showBreadCrumb(`SurgeryDropdown`,`J pouch completed, ileostomy closed`); changeSchoice(4)">
                     <!-- <img src="..." class="card-img-top" alt="..."> -->
                     <div class="card-body">
                     <p class="card-title">J pouch completed,<br/> ileostomy closed
@@ -120,7 +120,7 @@
             </div>
             </div>
 
-            <div id="mainContent">
+            <div id="mainMenu">
             <div class="row">
                 <div class="col">
                 <div class="btn-group mb-3" role="pregnancy group" aria-label="Pregnancy question dropdown">
@@ -142,7 +142,7 @@
                     <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#" onclick="showBreadCrumb(`SurgeryDropdown`,`No surgery yet`); changeSchoice(0)">No surgery yet</a></li>
                     <li><a class="dropdown-item" href="#" onclick="showBreadCrumb(`SurgeryDropdown`,`Colon completely removed, have end ostomy`); changeSchoice(1)">Colon completely removed, have end ostomy</a></li>
-                    <li><a class="dropdown-item" href="#" onclick="showBreadCrumb(`SurgeryDropdown`,`Colon completely removed, have end ileostomy`); changeSchoice(2)">Colon completely removed, have end ileostomy</a></li>                    
+                    <li><a class="dropdown-item" href="#" onclick="showBreadCrumb(`SurgeryDropdown`,`Colon partially removed, have end ileostomy`); changeSchoice(2)">Colon partially removed, have end ileostomy</a></li>                    
                     <li><a class="dropdown-item" href="#" onclick="showBreadCrumb(`SurgeryDropdown`,`J pouch made, have a diverting/loop ileostomy`); changeSchoice(3)">J pouch made, have a diverting/loop ileostomy</a></li>
                     <li><a class="dropdown-item" href="#" onclick="showBreadCrumb(`SurgeryDropdown`,`J pouch completed, ileostomy closed`); changeSchoice(4)">J pouch completed, ileostomy closed</a></li>                                        
 
@@ -154,41 +154,37 @@
             </div>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 text-center">
             <div class="col">
-                <a href="#" onclick="showCarousel(1)"><div class="card h-100">
+                <a href="#" onclick="showFirstNode(1)"><div class="card h-100">
                 <!-- <img src="..." class="card-img-top" alt="..."> -->
                 <div class="card-body">
-                    <p id="mainContent_01_header" class="card-title">Card title</p>
-                    <p id="mainContent_01_debug" class="small"style="color:rosybrown"></p>
+                    <p id="mainMenu_01_header" class="card-title">Card title</p>
                 </div>
                 </div>
                 </a>
             </div>
             <div class="col">
-                <a href="#" onclick="showCarousel(2)"><div id="mainContent_02" class="card h-100">
+                <a href="#" onclick="showFirstNode(2)"><div class="card h-100">
                 <!-- <img src="..." class="card-img-top" alt="..."> -->
                 <div class="card-body">
-                    <p id="mainContent_02_header" class="card-title">Card title</p>
-                    <p id="mainContent_02_debug" class="small"style="color:rosybrown"></p>
+                    <p id="mainMenu_02_header" class="card-title">Card title</p>
                 </div>
                 </div>
                 </a>
             </div>
             <div class="col">
-                <a href="#" onclick="showCarousel(3)"><div id="mainContent_03" class="card h-100">
+                <a href="#" onclick="showFirstNode(3)"><div class="card h-100">
                 <!-- <img src="..." class="card-img-top" alt="..."> -->
                 <div class="card-body">
-                    <p id="mainContent_03_header" class="card-title">Card title</p>
-                    <p id="mainContent_03_debug" class="small"style="color:rosybrown"></p>
+                    <p id="mainMenu_03_header" class="card-title">Card title</p>
                 </div>
                 </div>
                 </a>
             </div>
             <div class="col">
-                <a href="#" onclick="showCarousel(4)"><div id="mainContent_04" class="card h-100">
+                <a href="#" onclick="showFirstNode(4)"><div class="card h-100">
                 <!-- <img src="..." class="card-img-top" alt="..."> -->
                 <div class="card-body">
-                    <p id="mainContent_04_header" class="card-title">Card title</p>
-                    <p id="mainContent_04_debug" class="small" style="color:rosybrown"></p>
+                    <p id="mainMenu_04_header" class="card-title">Card title</p>
                 </div>
                 </div>
                 </a>
@@ -196,24 +192,26 @@
             </div>
             </div>
             
-            <div id="contentCarousel" class="carousel slide">
-            <h3 id="carouselHeader" class="text-center">Header</h1>
+            <div id="mainContent" class="carousel slide">
+            <h3 id="mainContentHeader" class="text-center">Header</h1>
             <!-- <div class="carousel-indicators">
-                <button type="button" data-bs-target="#contentCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#contentCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#contentCarousel" data-bs-slide-to="2" aria-label="Slide 3" class="d-none"></button>
+                <button type="button" data-bs-target="#mainContent" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#mainContent" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#mainContent" data-bs-slide-to="2" aria-label="Slide 3" class="d-none"></button>
             </div> -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
                 <div class="card h-100">
                 <img src="images/placeholder.png" class="card-img-top" alt="Card 1">
                 <div class="card-body">
-                <h5 class="card-title">Card Title 1</h5>
-                <p class="card-text">Short descriptive text goes here.</p>
+                <h5 id="currentNodeHeader" class="card-title">Card Title 1</h5>
+                <p id="currentNodeContent" class="card-text">Placeholder text to be filled in.</p>
+                <p id="exitNodes" class="card-text"></p>
+                
                 </div>
                 </div>
                 </div>
-                <div class="carousel-item">
+                <!-- <div class="carousel-item">
                 <div class="card h-100">
                 <img src="images/placeholder.png" class="card-img-top" alt="Card 2">
                 <div class="card-body">
@@ -230,16 +228,16 @@
                 <p class="card-text">Short descriptive text goes here.</p>
                 </div>
                 </div>
-                </div>
+                </div> -->
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#contentCarousel" data-bs-slide="prev">
+            <!-- <button class="carousel-control-prev" type="button" data-bs-target="#mainContent" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#contentCarousel" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#mainContent" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
-            </button>
+            </button> -->
             </div>
             
             </div><!-- main md-10 column -->
