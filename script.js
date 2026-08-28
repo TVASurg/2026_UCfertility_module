@@ -7,6 +7,9 @@ var surgeryChoice = 0;
 
 var mainJSONparsed = ""; //container for mainContent.json
 var mainSections = []; //primary menu once filter questions are answered
+var nodeIsSingle = true; //true if single slide, false if multiple
+var nodeHeader = "";
+var nodeContent = []; //holding the content array from json
 var exitNodes = []; //for each carousel, there are exitNodes that lead to next sections
 var nodeTracker = []; //this starts recording once a menu square is selected
 
@@ -21,6 +24,7 @@ function loadJSON()
         //console.log(JSON.parse(request.responseText));
         mainJSONparsed = JSON.parse(request.responseText);
         }
+        
     }
     request.send(null);
 }
@@ -29,6 +33,7 @@ function init()
 {
     //remove loader?
     loadJSON();
+    //hideSection("banner");
     //hideSection("question_01");
     hideSection("question_02");
     hideSection("question_03");
@@ -250,6 +255,7 @@ function recalculateMainSection()
 
 function showFirstNode(mainSectionArrayIndex)
 {
+    hideSection("banner");
     nodeTracker=[];
     //replace carousel header with actual header
     document.getElementById('mainContentHeader').innerHTML = mainSections[0][(mainSectionArrayIndex-1)];
@@ -257,98 +263,219 @@ function showFirstNode(mainSectionArrayIndex)
     showSection('mainContent');
     hideSection('mainMenu');
     showNextNode(mainSections[mainSectionArrayIndex][0]);
+    //showNextNode("01c1");
 }
+
+
 
 function showNextNode(nodeID)
 {
+    var noOfSlidesInNode = 0
     nodeTracker.push(nodeID);
     mainJSONparsed.allEntries.forEach(node =>
     {
         if (node.nodeID == nodeID)
         {
             //heading information goes here
-            document.getElementById('currentNodeHeader').innerHTML = node.heading + " (" + nodeID + ") ";
+            nodeHeader = node.heading;
 
-            //we'll deal with the content later within currentNodeContent
-            //along with number of slides etc etc
+            //getting the content
+            nodeContent = [];
+            //console.log(node.content);
+            Object.entries(node.content).forEach(slideBullets =>{
+                nodeContent.push(slideBullets[1]);
+            });
 
+            //getting the media
+
+            //figuring out if the content is multi-slide
+            noOfSlidesInNode = Object.keys(node.content).length;
+            if (noOfSlidesInNode > 1)
+            {
+                nodeIsSingle = false;
+            }else
+            {
+                nodeIsSingle = true;
+            }
+            
             //bottom nav/exit nodes
-            //add filter in later
             exitNodes = node.exitNodes;
+
         }
     });    
     
-    filterExitNodes(exitNodes);
-    setExitNodeButtons(exitNodes);
-
-    //based on length...determine number of carousel slides needed
-        //add slides
-        //tweak controls
-}
-
-function goBackOneNode()
-{
-    if(nodeTracker.length > 1)
-    {
-        var nodeToGo = (nodeTracker[nodeTracker.length -2]);
-        nodeTracker.pop();
-        nodeTracker.pop();
-        
-        showNextNode(nodeToGo);
-    }
-}
-
-function backToMainMenu()
-{
-    nodeTracker = [];
-    exitNodes = [];
-    hideSection ('mainContent');
-    showSection('mainMenu');
-}
-
-function setExitNodeButtons(exitNodeArray)
-{
-    var nextNodesIDArray = [];
-    var nextNodesHeadingsArray = [];
-    var nextNodesHTML = "";
     
-    mainJSONparsed.allEntries.forEach(node =>
+
+    //parsing the content
+    if (nodeIsSingle == true)
     {
-        for(i=0; i<exitNodeArray.length; i++)
-        {
-            if (node.nodeID == exitNodeArray[i])
-            {
-                nextNodesIDArray.push(node.nodeID);
-                nextNodesHeadingsArray.push(node.heading);
-            }
-        }
-
-    });
-
-    nextNodesIDArray.forEach((element, index) =>
+        parseSingleSlideContent(nodeID, nodeHeader, nodeContent);
+    }
+    else if (nodeIsSingle == false)
     {
+        //console.log(nodeContent[1]);
+        parseMultipleSlideContent(nodeID, nodeHeader, nodeContent,noOfSlidesInNode);
+    }
+   
+    //bottom nav functions
+    filterExitNodes(exitNodes);
+    //setExitNodeButtons(exitNodes);
+}
 
-        nextNodesHTML += "<a class='branchingLink' href=#";
-        nextNodesHTML += " onclick=showNextNode('" + element +"')";
-        nextNodesHTML += ">Continue reading about: "
-        nextNodesHTML += nextNodesHeadingsArray[index] + " (" + element +")";
-        nextNodesHTML += "</a><br/>"
+
+function parseSingleSlideContent(id, header, content)
+{
+    var slideContentHTML = "";
+
+    slideContentHTML += `<div class="card h-100"><div class="">`;
+    slideContentHTML += `<img src="`;
+
+    slideContentHTML += `images/placeholder.png`;
+    
+    slideContentHTML += `" class="card-img-top" alt="Card 1">`;
+    
+    slideContentHTML += `<div class="card-body">`;
+    slideContentHTML += `<h5 class="card-title">`;
+    slideContentHTML += header;
+    slideContentHTML += ` (` + id + `)`;
+    slideContentHTML += `</h5>`;
+    
+    slideContentHTML += `<div class="currentNodeContent card-text"><ul>`;
+
+    content.forEach((element,index) =>
+    {
+        element.forEach(bulletPoint =>{
+        slideContentHTML += `<li>`;
+        slideContentHTML += bulletPoint;
+        slideContentHTML += `</li>`
+        })
     }
     )
+
+    slideContentHTML += `</ul>`;
+    slideContentHTML += `</div>`;
+
+    //here's the exitnodes
+    slideContentHTML += `<div id="exitNodes" class="pt-3 card-footer bg-transparent"><div class="btn-group d-flex dropdown-center" role="group" aria-label="mainContentButtonMenu">`;
+    slideContentHTML += `<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">More options                            </button>`;
+    slideContentHTML += `<ul class="dropdown-menu">`;
+
+    slideContentHTML += setExitNodeButtons(exitNodes);
+
+    slideContentHTML += `<li><hr class="dropdown-divider"></li>`
+    
     if (nodeTracker.length > 1)
     {
-        nextNodesHTML += '<button id="goBackButton"class="my-3 me-3 btn btn-outline-dark" ';
-        nextNodesHTML += " onclick='goBackOneNode()'";
-        nextNodesHTML += ">Go back one section";
-        nextNodesHTML += "</button>";
+        slideContentHTML += `<li><a onclick="goBackOneNode()" class="dropdown-item" href="#">Go back one section</a></li>`;
     }
 
-        nextNodesHTML += '<button class="my-3 btn btn-outline-dark" ';
-        nextNodesHTML += " onclick='backToMainMenu()'";
-        nextNodesHTML += ">Back to Main Menu";
-        nextNodesHTML += "</button>";
+    slideContentHTML += `<li><a onclick="backToMainMenu()" class="dropdown-item" href="#">Main menu</a></li>`;
+    slideContentHTML += `</ul>`;
+    slideContentHTML += `</div>`;
+    slideContentHTML += `</div>`;
+
+    //final wrappers
+    slideContentHTML += `</div>`;
+    slideContentHTML += `</div>`;
+    slideContentHTML += `</div>`;
+
+    document.getElementById("contentProper").innerHTML = slideContentHTML;
+}
+
+function parseMultipleSlideContent(id, header, content, noOfSlides)
+{
+    var slideContentHTML = "";
+    var slideIndicatorHTML = `<div class="carousel-indicators">`;
+
+    slideContentHTML += `<div class="card h-100">`;
+    //slideContentHTML += `_uc_tempPlaceholderForSlideContentHTML_uc_`;
+    slideContentHTML += `<div id ="mainCarousel" class="carousel slide">`;
+    slideContentHTML += `<div class="carousel-inner">`;
+
+    //dynamically adding carousel items
+    for (i=0; i < noOfSlides; i++){
+    slideContentHTML += `<div class="carousel-item`;
+    if (i==0)
+        {
+            slideContentHTML +=  ` active`;
+        }
+    slideContentHTML += `"><img src="`;
+
+    slideContentHTML += `images/placeholder.png`;
     
-    document.getElementById('exitNodes').innerHTML =nextNodesHTML;
+    slideContentHTML += `" class="card-img-top" alt="Card ` + i + `">` ;
+    
+    slideContentHTML += `<div class="card-body">`;
+    slideContentHTML += `<h5 class="card-title">`;
+    slideContentHTML += header;
+    slideContentHTML += ` (` + id + `)`;
+    slideContentHTML += `</h5>`;
+    
+    slideContentHTML += `<div class="currentNodeContent card-text"><ul>`;
+
+    content[i].forEach(element =>
+    {
+        
+        slideContentHTML += `<li>`;
+        slideContentHTML += element;
+        slideContentHTML += `</li>`
+        
+    }
+    )
+
+    slideContentHTML += `</ul>`;
+    slideContentHTML += `</div>`;
+    slideContentHTML += `</div>`;
+    slideContentHTML += `</div>`;
+
+    //this is for populating the carousel indicators
+    slideIndicatorHTML += `<button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="`
+    slideIndicatorHTML += i; 
+    if (i == 0)
+    {
+        slideIndicatorHTML += `" class="active" aria-current="true"></button>`;
+    }else
+    {
+        slideIndicatorHTML += `"></button>`;
+    }
+    
+
+    }
+    //end of dynamically adding carousel items
+    slideContentHTML += `</div>`;
+    slideContentHTML += `</div>`;
+
+    //finalize and then add in the indicators here
+    slideIndicatorHTML += `</div>`;
+
+    //here's the exitnodes
+    slideContentHTML += `<div id="exitNodes" class="py-3 card-footer bg-transparent">`;
+    slideContentHTML += `<div class="btn-group d-flex dropdown-center" role="group" aria-label="mainContentButtonMenu">`;
+    slideContentHTML += `<button type="button" class="btn btn-outline-dark" data-bs-target="#mainCarousel" data-bs-slide="prev"> < </button>`;
+    slideContentHTML += `<button type="button" class="rounded-0 btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">More options                            </button>`;
+    slideContentHTML += `<ul class="dropdown-menu">`;
+
+    slideContentHTML += setExitNodeButtons(exitNodes);
+
+    slideContentHTML += `<li><hr class="dropdown-divider"></li>`
+    
+    if (nodeTracker.length > 1)
+    {
+        slideContentHTML += `<li><a onclick="goBackOneNode()" class="dropdown-item" href="#">Go back one section</a></li>`;
+    }
+
+    slideContentHTML += `<li><a onclick="backToMainMenu()" class="dropdown-item" href="#">Main menu</a></li>`;
+    slideContentHTML += `</ul>`;
+    slideContentHTML += `<button type="button" class="btn btn-outline-dark" data-bs-target="#mainCarousel" data-bs-slide="next"> > </button>`;
+    slideContentHTML += `</div>`;
+    slideContentHTML += `</div>`;
+
+    //final wrappers
+    
+    slideContentHTML += `</div>`;
+    //slideContentHTML = slideContentHTML.replace("_uc_tempPlaceholderForSlideContentHTML_uc_", slideIndicatorHTML);
+
+    document.getElementById("contentProper").innerHTML = slideContentHTML;
 }
 
 function filterExitNodes (exitNodeArray, pChoice, sChoice)
@@ -713,6 +840,83 @@ function filterExitNodes (exitNodeArray, pChoice, sChoice)
     }
     }
     return exitNodeArray;
+}
+
+function setExitNodeButtons(exitNodeArray)
+{
+    //all this can stay, we're just rearranging where to put the nextNodesHTML
+    //also add in controls for
+        //go back one section button
+        //go back to main menu button
+        //controlling the active/disable arrows
+    //finally, setting up the carousel control
+
+    var nextNodesIDArray = [];
+    var nextNodesHeadingsArray = [];
+    var nextNodesHTML = "";
+    
+    mainJSONparsed.allEntries.forEach(node =>
+    {
+        for(i=0; i<exitNodeArray.length; i++)
+        {
+            if (node.nodeID == exitNodeArray[i])
+            {
+                nextNodesIDArray.push(node.nodeID);
+                nextNodesHeadingsArray.push(node.heading);
+            }
+        }
+
+    });
+
+    nextNodesHTML += '<li><p class="dropdown-header ">Read more about:</p></li>';
+
+    nextNodesIDArray.forEach((element, index) =>
+    {
+
+        nextNodesHTML += "<li><a class='dropdown-item text-wrap' href=#";
+        nextNodesHTML += " onclick=showNextNode('" + element +"')>";
+        nextNodesHTML += nextNodesHeadingsArray[index] + " (" + element +")";
+        nextNodesHTML += "</a></li>"
+    }
+    )
+
+    // if (nodeTracker.length > 1)
+    // {
+    //     nextNodesHTML += '<button id="goBackButton"class="my-3 me-3 btn btn-outline-dark" ';
+    //     nextNodesHTML += " onclick='goBackOneNode()'";
+    //     nextNodesHTML += ">Go back one section";
+    //     nextNodesHTML += "</button>";
+    // }
+
+    //     nextNodesHTML += '<button class="my-3 btn btn-outline-dark" ';
+    //     nextNodesHTML += " onclick='backToMainMenu()'";
+    //     nextNodesHTML += ">Back to Main Menu";
+    //     nextNodesHTML += "</button>";
+    
+    //document.getElementById('exitNodes').innerHTML =nextNodesHTML;
+
+    return nextNodesHTML;
+}
+
+function goBackOneNode()
+{
+    if(nodeTracker.length > 1)
+    {
+        var nodeToGo = (nodeTracker[nodeTracker.length -2]);
+        nodeTracker.pop();
+        nodeTracker.pop();
+        
+        showNextNode(nodeToGo);
+    }
+}
+
+function backToMainMenu()
+{
+    nodeTracker = [];
+    exitNodes = [];
+    hideSection ('mainContent');
+    showSection('mainMenu');
+    showSection("banner");
 }
 
 function hideSection(sectionID)

@@ -11,9 +11,9 @@
   <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-1 col-xl-4"></div><!-- spacer -->
+            <div class="col-md-1 col-lg-2 col-xl-3 col-xxl-4"></div><!-- spacer -->
             
-            <div class="col-md-10 col-xl-4"><h2 class="text-center mt-3 mb-5">Ulcerative colitis/fertility patient learning module</h2>
+            <div class="col-md-10 col-lg-8 col-xl-6 col-xxl-4"><h2 id="banner" class="text-center mt-3 mb-5">Ulcerative colitis/fertility patient learning module</h2>
             
             <div id="question_01">
             <div class="row justify-content-center text-center">
@@ -152,7 +152,7 @@
 
                 </div>
             </div>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 text-center">
+            <div class="row row-cols-1 row-cols-md-2 g-4 text-center">
             <div class="col">
                 <a href="#" onclick="showFirstNode(1)"><div class="card h-100">
                 <!-- <img src="..." class="card-img-top" alt="..."> -->
@@ -192,26 +192,109 @@
             </div>
             </div>
             
-            <div id="mainContent" class="carousel slide">
-            <h3 id="mainContentHeader" class="text-center">Header</h1>
+            <!-- <div class="card h-100">
+                <h3 id="mainContentHeader" class="text-center">Header</h3>    
+                <div id="mainContentTest" class="carousel slide">
+                <div id="contentCarousel" class="carousel-inner">
+                
+                <div class="carousel-item active">
+                <img src="images/placeholder.png" class="card-img-top" alt="Card 1">    
+                <div class="card-body">
+                <h5 class="card-title">Card Title 1</h5>
+                <div id="currentNodeContent" class="card-text">
+                    Card text
+                </div>
+                </div>
+                </div>
+                
+                 <div class="carousel-item">
+                <img src="images/placeholder.png" class="card-img-top" alt="Card 1">    
+                <div class="card-body">
+                <h5 class="card-title">Card Title 1</h5>
+                <div id="currentNodeContent" class="card-text">
+                    Card text
+                </div>
+                </div>
+                </div>
+                
+                 <div class="carousel-item">
+                <img src="images/placeholder.png" class="card-img-top" alt="Card 1">    
+                <div class="card-body">
+                <h5 class="card-title">Card Title 1</h5>
+                <div id="currentNodeContent" class="card-text">
+                    Card text
+                </div>
+                </div>
+                </div>
+                
+                </div>        
+                </div>
+                <div id="exitNodes" class="card-footer bg-transparent">
+                    <div class="btn-group d-flex dropdown-center" role="group" aria-label="mainContentButtonMenu">
+                    
+                    <button type="button" class="btn btn-outline-dark" data-bs-target="#mainContentTest" data-bs-slide="prev"> < </button>
+
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            More options
+                            </button>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Go back one section</a></li>
+                            <li><a class="dropdown-item" href="#">Main menu</a></li>
+                            </ul>
+                    <button type="button" class="btn btn-outline-dark" data-bs-target="#mainContentTest" data-bs-slide="next"> > </button>
+                    </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainContentTest" ata-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainContentTest" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>  -->
+
+            <div id="mainContent">
+            <h3 id="mainContentHeader" class="text-center">Header</h3>
             <!-- <div class="carousel-indicators">
                 <button type="button" data-bs-target="#mainContent" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#mainContent" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#mainContent" data-bs-slide-to="2" aria-label="Slide 3" class="d-none"></button>
             </div> -->
-            <div class="carousel-inner">
+            <div id="contentProper">
                 <div class="carousel-item active">
                 <div class="card h-100">
                 <img src="images/placeholder.png" class="card-img-top" alt="Card 1">
                 <div class="card-body">
-                <h5 id="currentNodeHeader" class="card-title">Card Title 1</h5>
-                <p id="currentNodeContent" class="card-text">Placeholder text to be filled in.</p>
-                <p id="exitNodes" class="card-text"></p>
+                <h5 class="card-title">Card Title 1</h5>
+                <div id="currentNodeContent" class="card-text">
+
+                </div>
+
+                </div>
+                </div>
+                </div>
                 
+                <!-- 
+                                <div id="exitNodes" class="card-footer bg-transparent">
+                    <div class="btn-group d-flex dropdown-center" role="group" aria-label="mainContentButtonMenu">
+                    <button type="button" class="btn btn-outline-dark"> ← </button>
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            More options
+                            </button>
+                            <ul class="dropdown-menu">
+                            <span id="nextNodesMenuItem" class="d-none">
+                            <li><p class="ms-3">Read more about:</p></li>
+                            <li><a class="dropdown-item text-wrap" href="#">about surgical treatment options for UC about surgical treatment options for UC</a></li>
+                            <li><hr class="dropdown-divider"></li></span>
+                            <li><a class="dropdown-item" href="#">Go back one section</a></li>
+                            <li><a class="dropdown-item" href="#">Main menu</a></li>
+                            </ul>
+                    <button type="button" class="btn btn-outline-dark"> → </button>
+                    </div>
+                    
+
                 </div>
-                </div>
-                </div>
-                <!-- <div class="carousel-item">
+                <div class="carousel-item">
                 <div class="card h-100">
                 <img src="images/placeholder.png" class="card-img-top" alt="Card 2">
                 <div class="card-body">
@@ -242,7 +325,7 @@
             
             </div><!-- main md-10 column -->
             
-            <div class="col-md-1 col-xl-4"></div><!-- spacer -->
+            <div class="col-md-1 col-lg-2 col-xl-3 col-xxl-4"></div><!-- spacer -->
             </div>
 
 

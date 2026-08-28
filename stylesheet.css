@@ -7,3 +7,21 @@ a {
     text-decoration: underline;
     color: black;
 }
+
+@media (max-width: 576px){
+    .currentNodeContent{
+        height: 45dvh; 
+        overflow-y: scroll;
+        scrollbar-gutter: stable;
+    }
+}
+
+@media (max-width: 768px){
+    .currentNodeContent{
+        overflow-y: scroll;
+    }
+}
+
+.carousel-indicators{
+    
+}
