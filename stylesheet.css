@@ -22,6 +22,6 @@ a {
     }
 }
 
-.carousel-indicators{
-    
+.carousel-inner {
+  height: 75dvh; 
 }
