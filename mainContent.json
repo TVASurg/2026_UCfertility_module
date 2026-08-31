@@ -58,7 +58,8 @@
         ],
         "slide03":
         [
-            "Ulcerative colitis (UC) patients are often treated with medication to control the inflammation and relieve their symptoms, but when these don’t work for the patient, surgical treatment of the digestive tract may be recommended."
+            "Ulcerative colitis (UC) patients are often treated with medication to control the inflammation and relieve their symptoms, but when these don’t work for the patient, surgical treatment of the digestive tract may be recommended.",
+            "Click on the 'More Options' below to learn more."
         ]
     },
     "media":
@@ -94,7 +95,8 @@
             "Past the stomach, the digestive tract becomes the small intestine. The small intestine is divided into 3 main segments: the duodenum, jejunum, and ileum.",
             "The ileum, the last segment of the small intestine, is often divided and reconnected in surgeries for ulcerative colitis (UC). You will hear that word root used in medical terms such as “ileostomy”.",
             "The colon (large intestine) is a tube-shaped organ about 5 feet in length, that absorbs water from the stool, to change its consistency from liquid to solid stool, and the rectum.",
-            "The colon ends in the rectum, where stool is stored until it is ready to be passed. The anus is a ring of muscle (called the anal sphincter) that relaxes to allow stool to pass out of the body. "
+            "The colon ends in the rectum, where stool is stored until it is ready to be passed. The anus is a ring of muscle (called the anal sphincter) that relaxes to allow stool to pass out of the body. ",
+            "Click on the 'More Options' menu to learn more about reproductive anatomy."
         ]
     },
     "media":
@@ -111,14 +113,17 @@
     {
         "slide01":
         [
-            "",
-            ""
+            "Female reproductive anatomy lies deep in the pelvis and include:",
+            "The ovaries, which produce eggs,",
+            "The fallopian tubes, which carry eggs to the uterus,",
+            "The uterus, where fertilized eggs implant into the uterine wall and become developing embryos,",
+            "The cervix, the narrow passageway between the uterus and vagina,",
+            "The vagina, also known as the birth canal."
         ],
         "slide02":
         [
-            "",
-            "",
-            ""
+            "Important for patients considering or undergoing ulcerative colitis (UC)surgical treatment, is that the anal canal is located very close to the vagina - hence if there is tear or injury here, there is risk of damage to the anal sphincter muscle.",
+            "To learn more about ulcerative colitis (UC) disease and surgical treatment options, check out the video<a target='_blank' href='https://pie.med.utoronto.ca/TVASurg/project/surgical-treatment-for-ulcerative-colitis/'> linked here </a>"
         ]
     },
     "media":
@@ -135,20 +140,28 @@
     {
         "slide01":
         [
-            "",
-            ""
+            "There are two possible endpoints for patients undergoing surgery to treat ulcerative colitis (UC). One is to have a permanent stoma (end ileostomy), the other is to have a J pouch."
         ],
         "slide02":
         [
-            "",
-            "",
-            ""
+            "Some patients choose to have a single surgery where their colon is completely removed (called a total proctocolectomy) and they live with a permanent end ileostomy."           
+        ],
+        "slide03":
+        [
+            "Other patients may wish to pursue the possibility of having what’s called a “J pouch” or ileal pouch anal anastomosis (IPAA). This surgical treatment option involves several staged surgeries."           
+        ],
+        "slide04":
+        [
+            "If you have, or had, a surgery that removed the entire colon including the rectum and anus (a total proctocolectomy), a J pouch is no longer an option, but pregnancy can still be possible. ",
+            "Click the 'More Options' button to learn more about various surgery options."  
         ]
     },
     "media":
     {
         "slide01":"",
-        "slide02":""
+        "slide02":"",
+        "slide03":"",
+        "slide04":""
     }
     },            
     {
@@ -159,20 +172,61 @@
     {
         "slide01":
         [
-            "",
-            ""
+            "The goal of a J-pouch surgery is to reshape the small intestine into a pouch that connects to the anus, allowing bowel movements without a permanent ostomy bag. This option would require multiple staged surgeries, spaced a few months apart.",
+            "Patients who have completed the J pouch surgeries pass stool just as they had before the surgeries (i.e. through the anus) - although you may have more frequent, softer stools because they no longer have a colon, where most water is absorbed. ",
+            "While J pouch surgery can be done in one step, this is only done in rare cases and carries additional risks."
         ],
         "slide02":
         [
-            "",
-            "",
-            ""
+            "For patients who are also balancing the medical concerns of fertility and pregnancy, the surgical stages, and timing of these stages, for ulcerative colitis (UC) treatment matter."
+        ],
+        "slide03":
+        [
+            "It’s important to be aware that the J pouch surgical treatment option for ulcerative colitis (UC) includes surgical steps that take place deep in the pelvis, near the female reproductive organs."
+        ],
+        "slide04":
+        [
+            "A first-stage partial colon removal, called a subtotal colectomy, does not typically affect fertility.",
+            "However, a later surgery to remove the rectum and create a J-pouch can affect fertility due to its location deep within the pelvis."
+        ],
+        "slide05":
+        [
+            "When medically appropriate, surgeons may recommend a patient to have the first surgery of the treatment plan, the partial colon removal, before getting pregnant, then come back and do the next stage surgery (J pouch construction), later."
+        ],
+        "slide06":
+        [
+            "Your first surgery in the staged surgical plan is usually/often called a “sub-total colectomy”, or “a colectomy”.",
+            "This first step in surgical treatment is a partial colon removal. This will usually be the first surgery you have, or in some cases, it might be combined with other steps on your first surgery."
+        ],
+        "slide07":
+        [
+            "The partial colon removal surgery, i.e. subtotal colectomy, results in the formation of a stoma: a part of the small intestine that is externalized to the skin of the abdomen. The stoma attaches to an external ostomy bag to collect stool.",
+            "Because a stoma is the result of a surgical procedure called an ileostomy, the terms stoma, ileostomy, and ostomy are frequently used interchangeably.",
+            "A short rectum stump is left behind, and deep pelvic surgery is avoided."
+        ],
+        "slide08":
+        [
+            "The next surgery, months later, involves removal of the rectum stump and creation of a “J pouch” from the last part of the small intestine (ileum), connecting the J pouch to the anus, allowing continuous passage of stool.",
+            "That is why it is called an ileal pouch anal anastomosis (IPAA):",
+            "The ileum (small intestine) is made into a pouch which is then connected (anastomosed) to the anus."
+        ],
+        "slide09":
+        [
+            "If done in 3 stages, a temporary stoma will remain in place after the J pouch creation, allowing the pouch time to heal before the 3rd surgery which is the closure of the stoma.",
+            "There are specific implications for the J-pouch surgery in patients who are trying to conceive, who are pregnant, and during delivery which we will explain in detail."
         ]
     },
     "media":
     {
         "slide01":"",
-        "slide02":""
+        "slide02":"",
+        "slide03":"",
+        "slide04":"",
+        "slide05":"",
+        "slide06":"",
+        "slide07":"",
+        "slide08":"",
+        "slide09":""
     }
     },    
     {
@@ -183,20 +237,27 @@
     {
         "slide01":
         [
-            "",
-            ""
+            "Before any surgery, you will be prepped on the OR bed and given anesthesia to fall asleep. A breathing tube and urinary catheter will also be placed.",
+            "There are different types of surgical approaches that might be used.",
+            "Open surgery is the traditional approach, where a single large incision will be made.",
+            "Laparoscopic surgery involves several smaller incisions. ",
+            "In some cases, your surgeon may determine that a transanal approach is the best option."
         ],
         "slide02":
         [
-            "",
-            "",
-            ""
+            "Following surgery, you will recover in the hospital for a few days. Once you are discharged, you will continue to recover at home.",
+            "After you have recovered from your surgery, you will continue to have follow up visits with your surgical care team. Any subsequent surgeries will be planned as needed."
+        ],
+        "slide03":
+        [
+            "Advocate for your options and your own preferences! Come prepared to your appointments with lists of goals and questions. The modules in the 'More Options' menu below can help you prepare question lists."
         ]
     },
     "media":
     {
         "slide01":"",
-        "slide02":""
+        "slide02":"",
+        "slide03":""
     }
     },
     {
@@ -207,20 +268,14 @@
     {
         "slide01":
         [
-            "",
-            ""
-        ],
-        "slide02":
-        [
-            "",
-            "",
-            ""
+            "One option for surgical treatment of ulcerative colitis (UC) is complete colon removal with a resulting permanent stoma, also called an ileostomy, end ileostomy, or simply, ostomy. Anyone with an ostomy may run into issues with blockage or obstruction. ",
+            "This “proctocolectomy” surgery, or sometimes called “total proctocolectomy”, includes a total colectomy, removal of the entire colon, and proctectomy, removal of the rectum, as well as removal of the anus.",
+            "If you have had a complete colon removal surgery (total proctocolectomy) and you have no intention to pursue a J-pouch surgery, or were told you no longer have J-pouch as an option, then you don’t need to think about further ulcerative colitis surgeries."
         ]
     },
     "media":
     {
-        "slide01":"",
-        "slide02":""
+        "slide01":""
     }
     },
     {
@@ -231,14 +286,14 @@
     {
         "slide01":
         [
-            "",
-            ""
+            "There are risks to fertility associated with a deep pelvic surgery (like a total proctocolectomy), but if you want to get your ulcerative colitis (UC) surgical treatment over and done with, you can choose to have a complete colon removal (total proctocolectomy), with no option to pursue J pouch later, and live with an end ileostomy.",
+            "In rare emergency cases, sometimes a patient has to have a total proctocolectomy for severe ulcerative colitis (UC) flare.",
+            "As a complete colon removal (total proctocolectomy) involves structures in the pelvis, this may affect the ability to conceive naturally."
         ],
         "slide02":
         [
-            "",
-            "",
-            ""
+            "Regardless of how you arrived at a permanent end ileostomy, if any issues with fertility come up, you still have the option to discuss Assisted Reproductive Therapies (ART), such as IVF, or other treatments, with a fertility specialist.",
+            "Click the 'More Options' button to explore further considerations given this point in your ulcerative colitis (UC) surgery treatment"            
         ]
     },
     "media":
@@ -255,20 +310,16 @@
     {
         "slide01":
         [
-            "",
-            ""
-        ],
-        "slide02":
-        [
-            "",
-            "",
-            ""
+            "Having had a total proctocolectomy should not impact pregnancy, but there are specific indications for patients who have had any surgery that resulted with an ostomy. ",
+            "You may find the ileostomy changing shape during pregnancy, and you may need to resize your appliance or speak with your ostomy nurse or surgery and GI teams.",
+            "While uncommon, some people may experience ileostomy prolapse, or obstruction. Either may require admission to hospital and IV fluids and surgical monitoring. ",
+            "Your OB and GI will monitor you closely for nutritional needs, and any complications. ",
+            "Click on the 'More Options' menu to explore further considerations given this point in your ulcerative colitis (UC) surgery treatment."
         ]
     },
     "media":
     {
-        "slide01":"",
-        "slide02":""
+        "slide01":""
     }
     },
     {
@@ -279,14 +330,12 @@
     {
         "slide01":
         [
-            "",
-            ""
+            "Often the first step in ulcerative colitis (UC) surgery treatment is a partial removal of the colon, leaving the rectum and anus, and resulting in an ileostomy, also called a stoma: a part of the small intestine that is externalized to the skin in the abdomen. This surgery is called a “subtotal colectomy”."
         ],
         "slide02":
         [
-            "",
-            "",
-            ""
+            "After a subtotal colectomy, the rectum and anus remain so that they can be reconnected later. At this point, you have the option to pursue a J-pouch, or to have your rectum and anus removed and live with a permanent stoma (end ileostomy)",
+            "Click the 'More Options' button to explore either option."
         ]
     },
     "media":
@@ -303,20 +352,16 @@
     {
         "slide01":
         [
-            "",
-            ""
-        ],
-        "slide02":
-        [
-            "",
-            "",
-            ""
+            "If you have had 1 surgery to treat your ulcerative colitis (UC), intend to have a J-pouch but have not had surgery to create it yet, and you have an ostomy, then you had a subtotal colectomy (partial colon removal), and have 1 or 2 more surgeries to go to complete the ulcerative colitis (UC) surgical treatment plan.",
+            "It’s important to be aware that the J pouch surgical treatment option for ulcerative colitis (UC) includes a surgical step that takes place deep in the pelvis, and that will be your next surgery.",
+            "If you want to pursue a J pouch, then in the next surgery, a part of the small intestine is made into a J-formation, and connected to the anus, allowing continuous passage of stool. A new stoma, this one with 2 openings, often called a “loop” or “diverting” ileostomy, will also be constructed. Subsequent surgery, months later, will involve internalization and re-connection of the ostomy, or stoma.",
+            "Click on the 'More Options' menu to explore the end ostomy option"
         ]
     },
     "media":
     {
-        "slide01":"",
-        "slide02":""
+        "slide01":""
+
     }
     },
     {
@@ -327,20 +372,14 @@
     {
         "slide01":
         [
-            "",
-            ""
-        ],
-        "slide02":
-        [
-            "",
-            "",
-            ""
+            "If you don’t want to pursue a J pouch, you can have your remaining colon and anus removed with a total proctocolectomy surgery, after which you will have a permanent stoma (end ileostomy).",
+            "By having had a partial colon removal already (subtotal colectomy) you’ve already begun the ulcerative colitis (UC) surgical treatment plan, but held off on steps that take place deep in the pelvis, so your fertility should be unaffected.",
+            "Click on the 'More Options' menu to learn about considerations for both surgical options"
         ]
     },
     "media":
     {
-        "slide01":"",
-        "slide02":""
+        "slide01":""
     }
     },
     {
@@ -351,20 +390,13 @@
     {
         "slide01":
         [
-            "",
-            ""
-        ],
-        "slide02":
-        [
-            "",
-            "",
-            ""
+            "With either ulcerative colitis (UC) surgical treatment option (permanent stoma or J pouch), you will have a stoma/ostomy for a period of time, either permanently or temporarily. Anyone with an ostomy may run into issues with blockage or obstruction. ",
+            "Click on the 'More Options' menu to learn about other considerations for surgery."
         ]
     },
     "media":
     {
-        "slide01":"",
-        "slide02":""
+        "slide01":""
     }
     },
     {
@@ -375,20 +407,14 @@
     {
         "slide01":
         [
-            "",
-            ""
-        ],
-        "slide02":
-        [
-            "",
-            "",
-            ""
+            "Because this stage carries the lowest risk of affecting fertility, some people may choose to complete their planned pregnancies before proceeding with J-pouch surgery. If you choose to continue with the J-pouch surgeries, there is a risk that your fertility may be affected.  ",
+            "Because later-stage ulcerative colitis (UC) surgeries can affect fertility, you may wish to discuss fertility preservation and assisted reproductive technologies (ART), such as IVF, with a fertility specialist. ",
+            "Advocate for your options and your own preferences! Come prepared to your appointments with lists of goals and questions. The modules listed in the 'More Options' menu below can help you prepare question lists."
         ]
     },
     "media":
     {
-        "slide01":"",
-        "slide02":""
+        "slide01":""
     }
     },
     {
@@ -399,20 +425,14 @@
     {
         "slide01":
         [
-            "",
-            ""
-        ],
-        "slide02":
-        [
-            "",
-            "",
-            ""
+            "If you are already pregnant, you can put off further J-pouch surgeries until after you've had your baby but just be aware that the increased abdominal pressure from a pregnancy can cause your ostomy/stoma to change shape. This can look alarming, but it should still work as before.",
+            "You should not experience an increased risk of surgical complications during delivery related to your ulcerative colitis (UC) or ostomy/stoma. ",
+            "Advocate for your options and your own preferences! Come prepared to your appointments with lists of goals and questions. The modules listed in the 'More Options' menu below can help you prepare question lists."
         ]
     },
     "media":
     {
-        "slide01":"",
-        "slide02":""
+        "slide01":""        
     }
     },
     {
@@ -423,20 +443,15 @@
     {
         "slide01":
         [
-            "",
-            ""
-        ],
-        "slide02":
-        [
-            "",
-            "",
-            ""
+            "If you have had one or two surgeries to treat your ulcerative colitis, you have a J-pouch but still have an ostomy, then you have one more surgery to go to complete the surgical treatment plan for ulcerative colitis.",
+            "When you have a J pouch and an ileostomy, this is a special kind of temporary ileostomy called a “loop” or “diverting” ileostomy, which has two openings rather than just one. Anyone with an ostomy may run into issues with blockage or obstruction.",
+            "There are specific implications for the J-pouch surgery in patients who are trying to conceive, who are pregnant, and during delivery. If you’ve had a J pouch made, then you’ve had a deep pelvic surgery, and fertility may have been affected.",
+            "Click on the 'More Options' menu to explore further considerations given this point in your ulcerative colitis (UC) surgery treatment."
         ]
     },
     "media":
     {
-        "slide01":"",
-        "slide02":""
+        "slide01":""
     }
     },
     {
@@ -447,20 +462,14 @@
     {
         "slide01":
         [
-            "",
-            ""
-        ],
-        "slide02":
-        [
-            "",
-            "",
-            ""
+            "Someone thinking about pregnancy in 1-5 yrs may undergo surgery to complete the J-pouch within that time frame. You have time on your side to get your disease under control and optimize medications.",
+            "Following J pouch creation surgery, with ostomy/stoma, your fertility may have been affected, so you may want to discuss Artificial Reproductive Therapies (ART), such as IVF, or other treatments, with a Fertility specialist.",
+            "Advocate for your options and your own preferences! Come prepared to your appointments with lists of goals and questions. The modules listed in the 'More Options' menu below can help you prepare question lists."
         ]
     },
     "media":
     {
-        "slide01":"",
-        "slide02":""
+        "slide01":""
     }
     },
     {
@@ -471,20 +480,13 @@
     {
         "slide01":
         [
-            "",
-            ""
-        ],
-        "slide02":
-        [
-            "",
-            "",
-            ""
+            "If you have a temporary diverting ileostomy, there are specific implications for a stoma in patients who are pregnant. During pregnancy, the developing baby will increase pressure in your abdomen, and this internal pressure can cause the stoma to become enlarged or prolapse out. This can look alarming and may cause discomfort, but it should still work as before. You may need to see your surgeon or stoma nurse for advice on resizing the skin appliance, or how to manage a prolapse.",
+            "Advocate for your options and your own preferences! Come prepared to your appointments with lists of goals and questions. The modules listed in the 'More Options' menu below can help you prepare question lists."
         ]
     },
     "media":
     {
-        "slide01":"",
-        "slide02":""
+        "slide01":""
     }
     },
     {
@@ -495,20 +497,15 @@
     {
         "slide01":
         [
-            "",
-            ""
-        ],
-        "slide02":
-        [
-            "",
-            "",
-            ""
+            "If you have had 2 or 3 surgeries to treat your ulcerative colitis, you have a functioning J-pouch and no longer have an ostomy (if you had one), then you have completed the surgical treatment plan for ulcerative colitis.  ",
+            "It’s important to be aware that the J pouch surgical treatment option for ulcerative colitis (UC) included earlier surgical steps that took place deep in the pelvis, which may have affected reproductive anatomy.",
+            "There are specific implications for the J-pouch surgery in patients who are trying to conceive, who are pregnant, and during delivery. ",
+            "Click on the 'More Options' menu to explore further considerations given this point in your ulcerative colitis (UC) surgery treatment."
         ]
     },
     "media":
     {
-        "slide01":"",
-        "slide02":""
+        "slide01":""
     }
     },
     {
@@ -519,20 +516,13 @@
     {
         "slide01":
         [
-            "",
-            ""
-        ],
-        "slide02":
-        [
-            "",
-            "",
-            ""
+            "Following J pouch completion surgery, your fertility may have been affected by an earlier stage, so if you are having difficulties conceiving, you may want to discuss Artificial Reproductive Therapies (ART), such as IVF, or other treatments, with a Fertility specialist.",
+            "Click on the 'More Options' menu to explore further considerations given this point in your ulcerative colitis (UC) surgery treatment."
         ]
     },
     "media":
     {
-        "slide01":"",
-        "slide02":""
+        "slide01":""
     }
     },
     {
@@ -543,14 +533,12 @@
     {
         "slide01":
         [
-            "",
-            ""
+            "If you’re pregnant, with a functioning J pouch, you may notice a change to your J pouch function. There may be increased frequency or urgency to pass stool as the growing baby is restricting space in your pelvis."
         ],
         "slide02":
         [
-            "",
-            "",
-            ""
+            "You do have a higher risk of surgical complications during delivery related to your J-pouch, so individuals who are pregnant with a J-pouch are often recommended to have c-section delivery to minimize the risk of tear or injury to the anal sphincter muscle controlling anal function, and avoid related or consequent incontinence, which are potential risks with a vaginal delivery. Your obstetrician and surgeon will help you decide which route of delivery is most appropriate for you. ",
+            "Advocate for your options and your own preferences! Come prepared to your appointments with lists of goals and questions. The modules listed in the 'More Options' menu below can help you prepare question lists."
         ]
     },
     "media":
@@ -567,20 +555,17 @@
     {
         "slide01":
         [
-            "",
-            ""
-        ],
-        "slide02":
-        [
-            "",
-            "",
-            ""
+            "There are medication options for those with ulcerative colitis (UC), and you’ll want to know how these medications relate to fertility and pregnancy.",
+            "Find out from your prescribing doctor if the medication is safe or not for pregnancy before you make any changes to your routine. Don’t stop taking it without getting this information first.",
+            "Studies have shown that the activity of your ulcerative colitis (UC) when you conceive can impact how your pregnancy goes.",
+            "Click",
+            "Click <a target='_blank' href='https://pregnancy.ibdclinic.ca/resource/ibd-medications-and-pregnancy/'>here to learn more about IBD medications and pregnancy.</a>",
+            "Click on the 'More Options' menu to explore further considerations given this point in your ulcerative colitis (UC) surgery treatment."
         ]
     },
     "media":
     {
-        "slide01":"",
-        "slide02":""
+        "slide01":""
     }
     },
     {
