@@ -389,7 +389,7 @@ function parseMultipleSlideContent(id, header, content, noOfSlides)
 
     slideContentHTML += `<div class="card h-100">`;
     //slideContentHTML += `_uc_tempPlaceholderForSlideContentHTML_uc_`;
-    slideContentHTML += `<div id ="mainCarousel" class="carousel slide">`;
+    slideContentHTML += `<div id ="mainCarousel" data-bs-wrap="false" class="carousel slide">`;
     slideContentHTML += `<div class="carousel-inner">`;
 
     //dynamically adding carousel items
