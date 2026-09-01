@@ -16,12 +16,23 @@ a {
     }
 }
 
+@media (min-width: 576px){
+        .carousel-inner {
+         height: 75dvh;
+    }
+}
+
 @media (max-width: 768px){
     .currentNodeContent{
         overflow-y: scroll;
     }
+
+    
 }
 
-.carousel-inner {
-  height: 75dvh;
+
+
+.currentNodeContent a
+{
+text-decoration: underline;
 }
