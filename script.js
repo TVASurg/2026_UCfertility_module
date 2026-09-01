@@ -377,6 +377,7 @@ function parseSingleSlideContent(id, header, content)
     //final wrappers
     slideContentHTML += `</div>`;
     slideContentHTML += `</div>`;
+    slideContentHTML += `<a href="mailto:tvasurg@gmail.com?subject=UC fertility module feedback on node ` + id + `" target="_blank" class="small text-center text-decoration-underline">module feedback on ` + id + `</a>`;
     slideContentHTML += `</div>`;
 
     document.getElementById("contentProper").innerHTML = slideContentHTML;
@@ -472,6 +473,7 @@ function parseMultipleSlideContent(id, header, content, noOfSlides)
 
     //final wrappers
     
+    slideContentHTML += `<a href="mailto:tvasurg@gmail.com?subject=UC fertility module feedback on node ` + id + `" target="_blank" class="small text-center text-decoration-underline">module feedback on ` + id + `</a>`;
     slideContentHTML += `</div>`;
     //slideContentHTML = slideContentHTML.replace("_uc_tempPlaceholderForSlideContentHTML_uc_", slideIndicatorHTML);
 
