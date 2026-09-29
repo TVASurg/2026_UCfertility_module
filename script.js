@@ -12,6 +12,7 @@ var nodeHeader = "";
 var nodeContent = []; //holding the content array from json
 var exitNodes = []; //for each carousel, there are exitNodes that lead to next sections
 var nodeTracker = []; //this starts recording once a menu square is selected
+var currentSlide = 0; //tracks current slide to turn < > buttons on/off
 
 
 function loadJSON()
@@ -81,7 +82,7 @@ function recalculateMainSection()
                    ["01a0"],
                    ["05a0"],
                    ["02a0"],
-                   ["03a0"]
+                   ["08a0"]
                 ]
 
             }else if (pregnantChoice == 2)
@@ -92,7 +93,7 @@ function recalculateMainSection()
                    ["01a0"],
                    ["07a0"],                   
                    ["02a0"],
-                   ["03a0"]
+                   ["08a0"]
                 ]
 
             }
@@ -106,7 +107,7 @@ function recalculateMainSection()
                    ["01a0"],
                    ["04b0"],
                    ["02b0"],
-                   ["03a0"]
+                   ["08b0"]
                    
                 ]
             }else if (pregnantChoice == 1)
@@ -117,7 +118,7 @@ function recalculateMainSection()
                    ["01a0"],
                    ["05b0"],
                    ["02b0"],
-                   ["03a0"]
+                   ["08b0"]
                 ]
 
             }else if (pregnantChoice == 2)
@@ -128,7 +129,7 @@ function recalculateMainSection()
                    ["01a0"],
                    ["07b0"],                   
                    ["02b0"],
-                   ["03a0"]
+                   ["08b0"]
                 ]
 
             }
@@ -142,7 +143,7 @@ function recalculateMainSection()
                    ["01a0"],
                    ["04c0"],
                    ["02c0"],
-                   ["03a0"]
+                   ["08c0"]
                    
                 ]
             }else if (pregnantChoice == 1)
@@ -153,7 +154,7 @@ function recalculateMainSection()
                    ["01a0"],
                    ["05c0"],
                    ["02c0"],
-                   ["03a0"]
+                   ["08c0"]
                 ]
 
             }else if (pregnantChoice == 2)
@@ -164,7 +165,7 @@ function recalculateMainSection()
                    ["01a0"],
                    ["07c0"],                   
                    ["02c0"],
-                   ["03a0"]
+                   ["08c0"]
                 ]
 
             }
@@ -178,7 +179,7 @@ function recalculateMainSection()
                    ["01a0"],
                    ["04d0"],
                    ["02d0"],
-                   ["03a0"]
+                   ["08c0"]
                    
                 ]
             }else if (pregnantChoice == 1)
@@ -189,7 +190,7 @@ function recalculateMainSection()
                    ["01a0"],
                    ["05d0"],
                    ["02d0"],
-                   ["03a0"]
+                   ["08c0"]
                 ]
 
             }else if (pregnantChoice == 2)
@@ -200,7 +201,7 @@ function recalculateMainSection()
                    ["01a0"],
                    ["07d0"],                   
                    ["02d0"],
-                   ["03a0"]
+                   ["08c0"]
                 ]
 
             }
@@ -214,7 +215,7 @@ function recalculateMainSection()
                    ["01a0"],
                    ["04e0"],
                    ["02e0"],
-                   ["03a0"]
+                   ["08c0"]
                    
                 ]
             }else if (pregnantChoice == 1)
@@ -225,7 +226,7 @@ function recalculateMainSection()
                    ["01a0"],
                    ["05e0"],
                    ["02e0"],
-                   ["03a0"]
+                   ["08c0"]
                 ]
 
             }else if (pregnantChoice == 2)
@@ -236,7 +237,7 @@ function recalculateMainSection()
                    ["01a0"],
                    ["07d0"],                   
                    ["02e0"],
-                   ["03a0"]
+                   ["08c0"]
                 ]
 
             }
@@ -255,6 +256,7 @@ function recalculateMainSection()
 
 function showFirstNode(mainSectionArrayIndex)
 {
+
     hideSection("banner");
     nodeTracker=[];
     //replace carousel header with actual header
@@ -270,7 +272,8 @@ function showFirstNode(mainSectionArrayIndex)
 
 function showNextNode(nodeID)
 {
-    var noOfSlidesInNode = 0
+    var noOfSlidesInNode = 0;
+   
     nodeTracker.push(nodeID);
     mainJSONparsed.allEntries.forEach(node =>
     {
@@ -299,13 +302,12 @@ function showNextNode(nodeID)
             }
             
             //bottom nav/exit nodes
-            exitNodes = node.exitNodes;
-
+            exitNodes = [...node.exitNodes];
         }
-    });    
+    });  
     
+    filterExitNodes(exitNodes);
     
-
     //parsing the content
     if (nodeIsSingle == true)
     {
@@ -318,13 +320,14 @@ function showNextNode(nodeID)
     }
    
     //bottom nav functions
-    filterExitNodes(exitNodes);
+        
     //setExitNodeButtons(exitNodes);
 }
 
 
 function parseSingleSlideContent(id, header, content)
 {
+    currentSlide = 0;
     var slideContentHTML = "";
 
     slideContentHTML += `<div class="card h-100"><div class="">`;
@@ -385,6 +388,7 @@ function parseSingleSlideContent(id, header, content)
 
 function parseMultipleSlideContent(id, header, content, noOfSlides)
 {
+    currentSlide = 0;
     var slideContentHTML = "";
     var slideIndicatorHTML = `<div class="carousel-indicators">`;
 
@@ -450,10 +454,15 @@ function parseMultipleSlideContent(id, header, content, noOfSlides)
     slideIndicatorHTML += `</div>`;
 
     //here's the exitnodes
-    slideContentHTML += `<div id="exitNodes" class="py-3 card-footer bg-transparent">`;
-    slideContentHTML += `<div class="btn-group d-flex dropdown-center" role="group" aria-label="mainContentButtonMenu">`;
-    slideContentHTML += `<button type="button" class="btn btn-outline-dark" data-bs-target="#mainCarousel" data-bs-slide="prev"> < </button>`;
-    slideContentHTML += `<button type="button" class="rounded-0 btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">More options                            </button>`;
+    slideContentHTML += `<div id="exitNodes" class="bg-transparent">`;
+    slideContentHTML += `<div class="btn-group d-flex my-2 mx-5" role="group" >`;
+    slideContentHTML += `<button id="prevSlideBtn" onclick="togglePrevNextButtonStatus('prev', `+ noOfSlides + `)" type="button" class="btn btn-secondary disabled" data-bs-target="#mainCarousel" data-bs-slide="prev"> < </button>`;
+
+    slideContentHTML += `<button id="nextSlideBtn" onclick="togglePrevNextButtonStatus('next', `+ noOfSlides + `)" type="button" class="btn btn-secondary" data-bs-target="#mainCarousel" data-bs-slide="next"> > </button>`;
+    slideContentHTML += `</div>`;
+    slideContentHTML += `</div>`;
+
+        slideContentHTML += `<div class="btn-group dropup-center dropup d-flex my-2 mx-5"><button type="button" class=" btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">More options                            </button>`;
     slideContentHTML += `<ul class="dropdown-menu">`;
 
     slideContentHTML += setExitNodeButtons(exitNodes);
@@ -466,10 +475,27 @@ function parseMultipleSlideContent(id, header, content, noOfSlides)
     }
 
     slideContentHTML += `<li><a onclick="backToMainMenu()" class="dropdown-item" href="#">Main menu</a></li>`;
-    slideContentHTML += `</ul>`;
-    slideContentHTML += `<button type="button" class="btn btn-outline-dark" data-bs-target="#mainCarousel" data-bs-slide="next"> > </button>`;
-    slideContentHTML += `</div>`;
-    slideContentHTML += `</div>`;
+    slideContentHTML += `</ul></div>`;
+    // slideContentHTML += `<div id="exitNodes" class="py-3 card-footer bg-transparent">`;
+    // slideContentHTML += `<div class="btn-group d-flex dropdown-center" role="group" aria-label="mainContentButtonMenu">`;
+    // slideContentHTML += `<button id="prevSlideBtn" onclick="togglePrevNextButtonStatus('prev', `+ noOfSlides + `)" type="button" class="btn btn-secondary disabled" data-bs-target="#mainCarousel" data-bs-slide="prev"> < </button>`;
+    // slideContentHTML += `<button type="button" class="rounded-0 btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">More options                            </button>`;
+    // slideContentHTML += `<ul class="dropdown-menu">`;
+
+    // slideContentHTML += setExitNodeButtons(exitNodes);
+
+    // slideContentHTML += `<li><hr class="dropdown-divider"></li>`
+    
+    // if (nodeTracker.length > 1)
+    // {
+    //     slideContentHTML += `<li><a onclick="goBackOneNode()" class="dropdown-item" href="#">Go back one section</a></li>`;
+    // }
+
+    // slideContentHTML += `<li><a onclick="backToMainMenu()" class="dropdown-item" href="#">Main menu</a></li>`;
+    // slideContentHTML += `</ul>`;
+    // slideContentHTML += `<button id="nextSlideBtn" onclick="togglePrevNextButtonStatus('next', `+ noOfSlides + `)" type="button" class="btn btn-secondary" data-bs-target="#mainCarousel" data-bs-slide="next"> > </button>`;
+    // slideContentHTML += `</div>`;
+    // slideContentHTML += `</div>`;
 
     //final wrappers
     
@@ -478,6 +504,32 @@ function parseMultipleSlideContent(id, header, content, noOfSlides)
     //slideContentHTML = slideContentHTML.replace("_uc_tempPlaceholderForSlideContentHTML_uc_", slideIndicatorHTML);
 
     document.getElementById("contentProper").innerHTML = slideContentHTML;
+}
+
+function togglePrevNextButtonStatus(direction, noOfSlides)
+{
+    if (direction == "next")
+    {
+        currentSlide ++;
+        if (currentSlide > 0)
+        {
+            document.getElementById("prevSlideBtn").classList.remove("disabled");
+        }
+        if (currentSlide == (noOfSlides -1))
+        {
+            document.getElementById("nextSlideBtn").classList.add("disabled");
+        }
+    }
+    else if (direction == "prev")
+    {
+        currentSlide --;
+        if (currentSlide == 0)
+        {
+            document.getElementById("prevSlideBtn").classList.add("disabled");
+            document.getElementById("nextSlideBtn").classList.remove("disabled");
+        }
+    }
+
 }
 
 function filterExitNodes (exitNodeArray, pChoice, sChoice)
@@ -501,8 +553,8 @@ function filterExitNodes (exitNodeArray, pChoice, sChoice)
                     "02c0",
                     "04a0",
                     "04f0",
-                    "05a0",
-                    "06a0",
+                    //"05a0",
+                    // "06a0",
                     "08a0",
                     "09a0",
                     "09b0"
@@ -525,7 +577,7 @@ function filterExitNodes (exitNodeArray, pChoice, sChoice)
                     "02d0",
                     
                     "05a0",
-                    "06a0",
+                    // "06a0",
                     "07a0",
                     "08a0",
                     "09a0",
@@ -595,7 +647,7 @@ function filterExitNodes (exitNodeArray, pChoice, sChoice)
 
                     "05b0",
                     "06b0",
-                    "07b0",
+                    //"07b0",
                     
                     "08b0",
                     "09a0",
@@ -714,6 +766,7 @@ function filterExitNodes (exitNodeArray, pChoice, sChoice)
                     "02d0",
                     "02d1",
                     "02e0",
+                    "02e1",
 
                     "04d0",
                     "04f0",
@@ -835,12 +888,14 @@ function filterExitNodes (exitNodeArray, pChoice, sChoice)
 
     }
 
+
     // Loop backwards to safely splice while mutating
     for (let i = exitNodeArray.length - 1; i >= 0; i--) {
     if (!inclusionArray.includes(exitNodeArray[i])) {
         exitNodeArray.splice(i, 1); // Removes the non-intersection element
     }
     }
+
     return exitNodeArray;
 }
 

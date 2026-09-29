@@ -26,7 +26,8 @@
         [
             "Many people with ulcerative colitis (UC) are treated with medications, but approximately 1 in 10 (10%)  will require surgery within 10 years of diagnosis.",
             "In some cases, ulcerative colitis (UC) surgery is needed urgently due to a medical emergency. ",
-            "Click on the <strong> More Options </strong> below to learn more."
+            "Click on the <strong> More Options </strong> below to learn more about UC disease symptoms.",
+            "Or click on the <strong> More Options </strong> below to return to your customized Main Menu."
         ]
     },
     "media":
@@ -37,7 +38,7 @@
     },
     {
     "nodeID" : "01b0",
-    "exitNodes":["01c1","03a0"],
+    "exitNodes":["01c1"],
     "heading": "UC Disease and Symptoms",
     "content": 
     {
@@ -94,7 +95,10 @@
         [
             "The digestive tract is a series of organs that reside mostly in your abdomen that break down food and drink, absorbs nutrients and water, and eliminates waste.",
             "Past the stomach, the digestive tract becomes the small intestine. The small intestine is divided into 3 main segments: the duodenum, jejunum, and ileum.",
-            "The ileum, the last segment of the small intestine, is often divided and reconnected in surgeries for ulcerative colitis (UC). You will hear that word root used in medical terms such as “ileostomy”.",
+            "The ileum, the last segment of the small intestine, is often divided and reconnected in surgeries for ulcerative colitis (UC). You will hear that word root used in medical terms such as “ileostomy”."
+        ],
+        "slide02":
+        [
             "The colon (large intestine) is a tube-shaped organ about 5 feet in length, that absorbs water from the stool, to change its consistency from liquid to solid stool, and the rectum.",
             "The colon ends in the rectum, where stool is stored until it is ready to be passed. The anus is a ring of muscle (called the anal sphincter) that relaxes to allow stool to pass out of the body. ",
             "Click on the <strong> More Options </strong> menu to learn more about reproductive anatomy."
@@ -102,7 +106,8 @@
     },
     "media":
     {
-        "slide01":""
+        "slide01":"",
+        "slide02":""
     }
     },
     {
@@ -123,7 +128,7 @@
         "slide02":
         [
             "Important for patients considering or undergoing ulcerative colitis (UC)surgical treatment, is that the anal canal is located very close to the vagina - hence if there is tear or injury here, there is risk of damage to the anal sphincter muscle.",
-            "To learn more about ulcerative colitis (UC) disease and surgical treatment options, check out the video<a target='_blank' href='https://pie.med.utoronto.ca/TVASurg/project/surgical-treatment-for-ulcerative-colitis/'> linked here </a>"
+            "To learn more about ulcerative colitis (UC) disease and surgical treatment options, check out the video <a target='_blank' href='https://pie.med.utoronto.ca/TVASurg/project/surgical-treatment-for-ulcerative-colitis/'>linked here </a>"
         ]
     },
     "media":
@@ -238,18 +243,21 @@
     {
         "slide01":
         [
-            "Before any surgery, you will be prepped on the OR bed and given anesthesia to fall asleep. A breathing tube and urinary catheter will also be placed.",
+            "Before any surgery, you will be prepped on the OR bed and given anesthesia to fall asleep. A breathing tube and urinary catheter will also be placed."
+        ],
+        "slide02":
+        [
             "There are different types of surgical approaches that might be used.",
             "Open surgery is the traditional approach, where a single large incision will be made.",
             "Laparoscopic surgery involves several smaller incisions. ",
             "In some cases, your surgeon may determine that a transanal approach is the best option."
         ],
-        "slide02":
+        "slide03":
         [
             "Following surgery, you will recover in the hospital for a few days. Once you are discharged, you will continue to recover at home.",
             "After you have recovered from your surgery, you will continue to have follow up visits with your surgical care team. Any subsequent surgeries will be planned as needed."
         ],
-        "slide03":
+        "slide04":
         [
             "Advocate for your options and your own preferences! Come prepared to your appointments with lists of goals and questions. The modules in the <strong> More Options </strong> menu below can help you prepare question lists."
         ]
@@ -258,7 +266,8 @@
     {
         "slide01":"",
         "slide02":"",
-        "slide03":""
+        "slide03":"",
+        "slide04":""
     }
     },
     {
@@ -409,6 +418,11 @@
     {
         "slide01":
         [
+            "Following a subtotal colectomy with ostomy/stoma, your fertility should be unaffected. The next surgery, J pouch creation, is the surgical step that takes place deep in the pelvis and can affect fertility.  ",
+            "If your surgeon and gastroenterologist feel you have healed, and your ulcerative colitis (UC) is under control, you can try to conceive naturally at this point, and can put off further J-pouch surgeries until after you've had your baby if you wish."
+        ],
+        "slide02":
+        [
             "Because this stage carries the lowest risk of affecting fertility, some people may choose to complete their planned pregnancies before proceeding with J-pouch surgery. If you choose to continue with the J-pouch surgeries, there is a risk that your fertility may be affected.  ",
             "Because later-stage ulcerative colitis (UC) surgeries can affect fertility, you may wish to discuss fertility preservation and assisted reproductive technologies (ART), such as IVF, with a fertility specialist. ",
             "Advocate for your options and your own preferences! Come prepared to your appointments with lists of goals and questions. The modules listed in the <strong> More Options </strong> menu below can help you prepare question lists."
@@ -416,7 +430,8 @@
     },
     "media":
     {
-        "slide01":""
+        "slide01":"",
+        "slide02":""
     }
     },
     {
@@ -560,7 +575,6 @@
             "There are medication options for those with ulcerative colitis (UC), and you’ll want to know how these medications relate to fertility and pregnancy.",
             "Find out from your prescribing doctor if the medication is safe or not for pregnancy before you make any changes to your routine. Don’t stop taking it without getting this information first.",
             "Studies have shown that the activity of your ulcerative colitis (UC) when you conceive can impact how your pregnancy goes.",
-            "Click",
             "Click <a target='_blank' href='https://pregnancy.ibdclinic.ca/resource/ibd-medications-and-pregnancy/'>here to learn more about IBD medications and pregnancy.</a>",
             "Click on the <strong> More Options </strong> menu to explore further considerations given this point in your ulcerative colitis (UC) surgery treatment."
         ]
@@ -572,7 +586,7 @@
     },
     {
     "nodeID" : "04a0",
-    "exitNodes":["04f0","05a0","08a0"],
+    "exitNodes":["02a0","04f0","05a0","08a0"],
     "heading": "Fertility considerations: No UC surgery",
     "content": 
     {
@@ -639,7 +653,7 @@
     },
     {
     "nodeID" : "04c0",
-    "exitNodes":["04f0","05c0","06a0","08a0"],
+    "exitNodes":["02c0", "04f0","05c0","08c0"],
     "heading": "Fertility: Subtotal colectomy",
     "content": 
     {
@@ -664,7 +678,7 @@
     },
     {
     "nodeID" : "04d0",
-    "exitNodes":["04f0","05d0","08c0"],
+    "exitNodes":["02e1","04f0","05d0","08c0"],
     "heading": "Fertility: J pouch with ostomy",
     "content": 
     {
@@ -714,7 +728,7 @@
     },
     {
     "nodeID" : "04f0",
-    "exitNodes":[],
+    "exitNodes":["08a0","08b0","08c0"],
     "heading": "In Vitro fertilization",
     "content": 
     {
@@ -1192,11 +1206,7 @@
     {
         "slide01":
         [
-            "Key Takeaways are:",
-            "Keeping your UC under control matters. Good disease control before pregnancy gives you the best chance of a healthy pregnancy.",
-            "Surgery can affect fertility. Some stages of surgery, particularly surgery deep in the pelvis, may affect fertility.",
-            "Your situation is unique. Talk with your care team about your fertility goals, surgery timing, and what is best for you.",
-            "Most patients with prior UC surgery have uncomplicated pregnancies. Early and supportive antenatal care helps to ensure a healthy pregnancy."
+            "Key Takeaways are:<ol><li>Keeping your UC under control matters. Good disease control before pregnancy gives you the best chance of a healthy pregnancy.</li><li>Surgery can affect fertility. Some stages of surgery, particularly surgery deep in the pelvis, may affect fertility.</li><li>Your situation is unique. Talk with your care team about your fertility goals, surgery timing, and what is best for you.</li><li>Most patients with prior UC surgery have uncomplicated pregnancies. Early and supportive antenatal care helps to ensure a healthy pregnancy.</li></ol>"
         ],
         "slide02":
         [
@@ -1212,9 +1222,8 @@
         "slide04":
         [
             "In each stage of your surgical treatment, you’ll want to know what the implications are for the next surgery you are facing. Are there implications on your next ulcerative colitis (UC) surgery? Fertility? Pregnancy? Delivery? Postpartum? A useful way to ask questions that address this is in any meeting with your care teams, is any question you can insert that word, “implication”, or the word “risk” into. “Will this have any implication on my ability to get pregnant?”, “Will pregnancy pose any risk to my J pouch function?”, “What are the risks of this surgery?” are all examples.",
-            "In ulcerative colitis (UC) surgical treatment, a key question to ask is: ",
-            "“Does this specific surgery take place deep in the pelvis?” ",
-            "or “Does this surgical option include a step that takes place deep in the pelvis?” ",
+            
+            "In ulcerative colitis (UC) surgical treatment, a key question to ask is: <ul><li>“Does this specific surgery take place deep in the pelvis?”</li><li>or “Does this surgical option include a step that takes place deep in the pelvis?”</li></ul>",
             "A question like this does a lot of work for you. It connects you and your surgeon on the anatomical region, and therefore, structures involved. Most surgeons will naturally follow up this line of discussion with risks and implications."
 
         ],
