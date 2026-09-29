@@ -1,0 +1,157 @@
+First some project admin notes:
+
+    Following up on dates/release, I reviewed the meeting notes and transcript from the last meeting and unfortunately they were vague about any specific dates.
+
+
+    They did clarify that Ethics can receive a mostly-text version of the prototype to review, so after this round of changes we can send it off to them to share with Ethics.
+        After Ethics sees that we have actually started building something, they can proceed with the steps to get round 2 of their research project going (which would include securing more funds).
+
+
+    They also did express a desire to have a "mostly done" version of the prototype (so, with fairly polished visuals, not just placeholders) for patients to see.
+        We are almost at this point.
+
+
+    Am keeping the Google Slides storyboards as a backup for now. Could potentially share this with them if they have to see something with visuals to make sense of it, but sharing this presents the potential for misunderstanding/miscommunication because it doesn't have the module functionality. 
+
+
+Here are all my notes on the current framework, you may have addressed some of these already:
+
+    Can we add module overview line to landing page: "Many people with UC worry about..."
+
+
+    Can we put buttons "inside" the text areas that help nudge users towards the next logical section,
+
+and keep the "More options" dropdown as a way for them to navigate non-linearly?
+
+    Alternatively, could use the "next" arrow button to do this
+        The "default" order of going through the content would be similar to how the SB slides are ordered
+    If not, could we remove the "next" arrow at the end of sections, or, have it loop through that section?
+
+
+    Can we indent a second set of bullet points in certain places, e.g. 01b0 for "Active disease" points?
+        (Wondering if we should bold or italic certain words or sets of words in various parts, but I'll leave this to Vivian and her team to decide)
+
+
+    For 2b0 (Total Proc surgical pathway), it ends up ending after the first set of bullet points, but can we navigate from here to 2b1, 2b2, or 2b3/7b depending on filter choices?
+
+
+    Sorry I messed this up on the matrix: The custom landing page "Planning and Support" button always goes to 03 Medications first, but it was supposed to 8a/b/c depending on surgical status (then that goes to 9a/b, etc):
+
+03 Medications should only show up as the first part of "Planning and Support" for the "No surgeries yet" status, and be available as an end-path option to navigate to for the "Before Pregnancy/Preconception" state.
+Medications aren't really relevant after you've had the first UC surgical treatment, and if you're pregnant or have given birth you've likely already been given information about that.
+There's only one situation where you might be talking about meds after having a J pouch, which is uncommon post-J pouch "flares", which I do think is mentioned somewhere already.
+
+General comment/quetsion on images/placeholders, what dimensions are we going with?
+This framework has space for 1280x720 images, but the current PT sites have 900x600 images
+For now, will render 720p images so that they're larger, but in a few cases the cropping might present issues for labels
+(horizontally narrower 1280x720 cuts off bottom and top spacing and pushes negative space to sides)
+
+01a0 Introduction
+Would like to add a bullet before the last one that points user towards "next" button, so:
+- Many people with ulcerative colitis (UC) are treated with medications, but approximately 1 in 10 (10%) will require surgery within 10 years of diagnosis.
+- In some cases, ulcerative colitis (UC) surgery is needed urgently due to a medical emergency.
+- Click on the "next" arrow to learn more about UC disease symptoms, or,
+- click on "More Options" below to return to your custom main menu.*
+(* So what we're doing here with this is we remind the user that the content IS being customized for them)
+
+01c1 Digestive Tract
+Looking now at the text and thinking about how this will translate to labels,
+I think we should break this up into at least 2 images,
+1. that focuses on the stomach, small intestine and its segments,
+and 2. that focuses on the colon and its segments inc. the rectum
+- Also, hoping we can either keep the arrow buttons on this page,
+so they can navigate straight to female reproductive organs, or,
+have separate buttons for the different navigation end points (FRA, back, main menu)
+
+
+    For surgical terms in parenthesis, is there a way we could add hover states to these so users could see medical terminology definitions?
+        (for mobile would have to be a pop-up instead of a hover state bubble)
+
+>>> No hover, just do click states with pop-up bubbles can use for both desktop + mobile
+- Dictionary page now on gDoc, linked here
+
+End of 02a0, discussion of surgical end-points.
+Last bullet prompts user to click on "More options" but arrows are still visible.
+Is it possible to hide them on screens like this one where multiple options are present?
+Alternatively, can "Next" arrow button go to J Pouch overview as in Slides?
+
+End of 02a1 is prefect
+
+02a2 Pre + Post surgery
+Should probably break this first slide up into 2 as well
+1. for OR bed placement, breathing tube + catheter
+2. for surgical incision types
+
+For the end of 02a2 Pre + Post surgery,
+is it possible to limit "More options" based on their filter choices?
+In other words, don't have all 3 "Fertility", "Pregnancy" and "Delivery" considerations,
+but only 1 of those 3 depending on what they picked from the filter questions?
+
+For 02b0, here is where the customized content should start to come into play
+(and where coding or sure starts getting complicated)
+- If the user selected "Before Pregnancy" as their fertility state,
+then 02b0 should continue on to 02b1
+- If the user selected "Pregnant" as their fertility state,
+then 02b0 should continue on to 02b2
+- If the user selected "After Pregnancy" as their fertility state,
+then 02b0 should continue on to 07b
+
+For 02c0, the intent is that the narrative splits into 2 paths:
+1. J pouch option (02ci)
+2. End ostomy option (02cii)
+and then, BOTH of those option slides/pages return to the same narrative pathway in 02ciii "Either option"
+
+02c1 Before Pregnancy is missing a slide. It jumps straight to "Because this stage...",
+but it should have 2 bullet points before this, beginning with "Following a subtotal..."
+
+After getting to 02c1 Before Pregnancy, when I pick "Go back one section",
+and then click "More Options" again, this time I get a limited selection (based just on "Before Pregnancy" status)
+
+Navigating away from 02ciii feels inconsistent as to what options show up in "More Options"
+
+If I make my selections for "Pregnant" and "J pouch made, have loop ostomy",
+then 02d0 "J pouch creation surgery" doesn't have any options for where to go next?
+I will double-check for this, but the intention was that "Before Pregnancy" usually gets "Pregnancy" content to navigate to,
+and "Pregnant" gets "Delivery" / "After Pregnancy" content to navigate to.
+
+Each set of fertility state and surgical state selections should provide users with:
+1. Intro section with customized options within
+2. Fertility considerations -OR- Pregnancy considerations -OR- Delivery considerations
+3. A UC Surgical overview customized per BOTH selections
+Each surgical section starts out with zero-number-letter-zero
+That first "zero" section is fertility/pregnancy/delivery independent
+Then, based on what they picked, the "zero" section goes to 1 Fertility, 2 Pregnant, or 3, which skips straight to letter sections of (ch)7.
+4. Planning & Support section with customized content within
+This should only start with "Medications" (ch3) for the specific combination of "Before Pregnant" and "No UC surgeries yet"
+All other combinations start with lettered sections of ch8
+
+End of 4a0, 4c0 & 4d0 Fertility Considerations
+The end options may have come from an earlier draft? End options for 4a should be:
+2a0 No prior UC surgery
+4f ART treatments
+5a Pregnancy considerations
+For 4c:
+2c0 Partial colon removal surgery
+4f ART Treatments
+5c Pregnancy considerations - subtotal
+For 4d:
+2e1 J pouch completion
+4f ART Treatments
+5d Pregnancy pelvic surgery
+End options for 4b0 & 4e0 look to be correct
+
+End of 4f ART Treatments should also be affected by choices,
+always links out to Mt Sinai clinic,
+always links out to ch9a because support pages are always the same,
+but should have a custom ch8 link based on:
+- 8a Planning & Support (no surgery / unsure / no deep pelvic)
+- 8b Planning & Support - with ostomy
+- 8c Planning & Support - with J pouch
+
+All end options for Pregnancy Considerations sections look good to go
+All end options for Postpartum Considerations sections look good to go
+
+09a What to Ask
+Hoping we can use bullet points and numbers for lists?
+
+Is it possible to link out to other TVASurg pages from the "More Options" dropdown?
