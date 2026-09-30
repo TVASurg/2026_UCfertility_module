@@ -38,7 +38,7 @@
     },
     {
     "nodeID" : "01b0",
-    "exitNodes":["01c1"],
+    "exitNodes":["01c1","03a0"],
     "heading": "UC Disease and Symptoms",
     "content": 
     {
@@ -237,7 +237,7 @@
     },    
     {
     "nodeID" : "02a2",
-    "exitNodes":["02b0","02c0","04a0","05a0","06a0","02d0"],
+    "exitNodes":["02b0","02c0"],
     "heading": "Pre and Post surgery",
     "content": 
     {
@@ -678,7 +678,7 @@
     },
     {
     "nodeID" : "04d0",
-    "exitNodes":["02e1","04f0","05d0","08c0"],
+    "exitNodes":["04f0","05d0","08c0"],
     "heading": "Fertility: J pouch with ostomy",
     "content": 
     {
@@ -1089,7 +1089,7 @@
         ],
         "slide02":
         [
-            "Ask about safe medications for pregnancy and breastfeeding. ",
+            "Ask about <a href='#' onclick='showNextNode(`03a0`)'>safe medications</a> for pregnancy and breastfeeding. ",
             "Controlling disease activity is of the utmost importance.",
             "If you’ve only tried 1 medication, there may be other options. ",
             "Most ulcerative colitis (UC) medications are generally safe for pregnancy, and won’t affect fertility or a developing embryo or fetus. However, a select few medications should be avoided during pregnancy. ",
@@ -1121,7 +1121,7 @@
     },
         {
     "nodeID" : "08b0",
-    "exitNodes":["09a0"],
+    "exitNodes":["03a0","09a0"],
     "heading": "Planning and Support: With ostomy",
     "content": 
     {
