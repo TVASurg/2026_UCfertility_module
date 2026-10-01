@@ -10,7 +10,7 @@ a {
 
 @media (max-width: 576px){
     .currentNodeContent{
-        height: 42dvh; 
+        height: 45dvh; 
         overflow-y: scroll;
         scrollbar-gutter: stable;
     }
