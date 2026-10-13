@@ -6,6 +6,7 @@ var pregnantChoice = 0;
 var surgeryChoice = 0;
 
 var mainJSONparsed = ""; //container for mainContent.json
+var breadCrumbHeader = ""; //for where am i? menu
 var mainSections = []; //primary menu once filter questions are answered
 var nodeIsSingle = true; //true if single slide, false if multiple
 var nodeHeader = "";
@@ -337,11 +338,36 @@ function parseSingleSlideContent(id, header, content)
     
     slideContentHTML += `" class="card-img-top" alt="Card 1">`;
     
-    slideContentHTML += `<div class="card-body">`;
+    slideContentHTML += `<div class="card-body"><div class="d-flex justify-content-between mb-2">`;
     slideContentHTML += `<h5 class="card-title">`;
     slideContentHTML += header;
     slideContentHTML += ` (` + id + `)`;
     slideContentHTML += `</h5>`;
+    slideContentHTML += `<div class="btn-group dropstart"><button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Where am I?</button><ul class="dropdown-menu whereAmIMenu">`;
+    slideContentHTML += `<li><a class="dropdown-item" onclick="backToMainMenu()" href="#">Home > </a></li>`;
+
+    nodeTracker.forEach((element, index, array)=>
+    {
+        if (index < array.length - 1)
+        {
+        slideContentHTML += `<li><a class="dropdown-item" href="#"`;
+        slideContentHTML += `onclick="goBackMoreNodes(`+ (array.length - (index+1)) + `, '`+ element + `')">`;
+        breadCrumbHeader = "";
+        lookupHeaderFromNodeID(element);
+        slideContentHTML += breadCrumbHeader;
+        slideContentHTML += ` > </a></li>`;
+        }
+        else
+        {
+        slideContentHTML += `<li><a class="dropdown-item" href="#">`;
+        breadCrumbHeader = "";
+        lookupHeaderFromNodeID(element);
+        slideContentHTML += breadCrumbHeader;
+        slideContentHTML += `</a></li>`;
+        }
+    }
+    )
+    slideContentHTML += `</ul></div></div>`;
     
     slideContentHTML += `<div class="currentNodeContent card-text"><ul>`;
 
@@ -410,11 +436,36 @@ function parseMultipleSlideContent(id, header, content, noOfSlides)
     
     slideContentHTML += `" class="card-img-top" alt="Card ` + i + `">` ;
     
-    slideContentHTML += `<div class="card-body">`;
+    slideContentHTML += `<div class="card-body"><div class="d-flex justify-content-between mb-2">`;
     slideContentHTML += `<h5 class="card-title">`;
     slideContentHTML += header;
     slideContentHTML += ` (` + id + `)`;
     slideContentHTML += `</h5>`;
+    slideContentHTML += `<div class="btn-group dropstart"><button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Where am I?</button><ul class="dropdown-menu whereAmIMenu">`;
+    slideContentHTML += `<li><a class="dropdown-item" onclick="backToMainMenu()" href="#">Home > </a></li>`;
+
+    nodeTracker.forEach((element, index, array)=>
+    {
+        if (index < array.length - 1)
+        {
+        slideContentHTML += `<li><a class="dropdown-item" href="#"`;
+        slideContentHTML += `onclick="goBackMoreNodes(`+ (array.length - (index+1)) + `, '`+ element + `')">`;
+        breadCrumbHeader = "";
+        lookupHeaderFromNodeID(element);
+        slideContentHTML += breadCrumbHeader;
+        slideContentHTML += ` > </a></li>`;
+        }
+        else
+        {
+        slideContentHTML += `<li><a class="dropdown-item" href="#">`;
+        breadCrumbHeader = "";
+        lookupHeaderFromNodeID(element);
+        slideContentHTML += breadCrumbHeader;
+        slideContentHTML += `</a></li>`;
+        }
+    }
+    )
+    slideContentHTML += `</ul></div></div>`;
     
     slideContentHTML += `<div class="currentNodeContent card-text"><ul>`;
 
@@ -967,6 +1018,32 @@ function goBackOneNode()
     }
 }
 
+function goBackMoreNodes(howMany, nodeToGo)
+{
+    if (howMany == 1)
+    {
+        nodeTracker.pop();
+        nodeTracker.pop();
+
+    }else if (howMany == 2)
+    {
+        nodeTracker.pop();
+        nodeTracker.pop();
+        nodeTracker.pop();
+        nodeTracker.pop();
+
+    }else if (howMany == 3)//this should be max?
+    {
+        nodeTracker.pop();
+        nodeTracker.pop();
+        nodeTracker.pop();
+        nodeTracker.pop();
+        nodeTracker.pop();
+        nodeTracker.pop();
+    }
+    showNextNode(nodeToGo);
+}
+
 function backToMainMenu()
 {
     nodeTracker = [];
@@ -984,6 +1061,17 @@ function hideSection(sectionID)
 function showSection(sectionID)
 {
     document.getElementById(sectionID).style.display = "block";
+}
+
+function lookupHeaderFromNodeID(queryID)
+{
+ mainJSONparsed.allEntries.forEach(node =>
+    {
+        if (node.nodeID == queryID)
+        {
+            breadCrumbHeader = node.heading;
+        }
+    });   
 }
 
 function showBreadCrumb(breadCrumbID, selectedOption)

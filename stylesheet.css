@@ -8,12 +8,22 @@ a {
     color: black;
 }
 
+.whereAmIMenu{/*for larger screens*/
+    width: 15dvw;
+    overflow-wrap: break-word;
+}
+
 @media (max-width: 576px){
     .currentNodeContent{
         height: 45dvh; 
         overflow-y: scroll;
         scrollbar-gutter: stable;
     }
+
+    .whereAmIMenu{
+    width: 55dvw !important;
+    overflow-wrap: break-word;
+}
 }
 
 @media (min-width: 576px){
@@ -30,6 +40,9 @@ a {
     
 }
 
+.whereAmIMenu li a{
+  text-wrap-mode: wrap !important;  
+}
 
 
 .currentNodeContent a
