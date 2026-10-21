@@ -2,7 +2,7 @@
   "allEntries":[
     {
     "nodeID" : "0000",
-    "exitNodes":[],
+    "exitNodes":["as of Oct 2026 exitNodes are irrelevant as we're proceeding with a more linear navigation"],
     "heading": "dummy node",
     "content": 
     {
@@ -20,7 +20,7 @@
         "slide01":
         [
             "Ulcerative colitis (UC) is an inflammatory bowel disease that affects the colon (large intestine), causing inflammation starting in the rectum moving up through the large intestine (sigmoid, descending, transverse, ascending).",
-            "There are various medications and surgical options available to people with ulcerative colitis. This module will discuss how the surgical options relate to fertility and pregnancy. "
+            "There are various <a href='#' onclick='showNextNode(`03a0`)'>medications</a> and <a href='https://pie.med.utoronto.ca/TVASurg/project/surgical-treatment-for-ulcerative-colitis/' target='_blank'>surgical options</a> available to people with ulcerative colitis. This module will discuss how the surgical options relate to fertility and pregnancy. "
         ],
         "slide02":
         [
@@ -48,24 +48,21 @@
         [
             "The most important thing for ulcerative colitis (UC) patients who are considering or trying to get pregnant, is to understand that for fertility and pregnancy outcomes, active disease is the most important factor. ",
             "Active disease in the preconception time reduces fertility, and increases risk of active disease during pregnancy.",
+            "Active disease in the preconception time reduces fertility, and increases risk of active disease during pregnancy.",
             "Active disease during pregnancy increases the risk of adverse outcomes such as pregnancy loss, premature birth, smaller-than-expected babies, and babies that grow more slowly than expected. This will then impact the baby's long term health. ",
             "Thus it is recommended to achieve disease remission before pregnancy whether by medical treatments or surgical treatments."
         ],
         "slide02":
         [
             "Ulcerative colitis (UC) causes inflammation and ulcers in your colon (large intestine).",
-            "Symptoms of active ulcerative colitis can include: ",
-            "abdominal cramps, ",
-            "bloody stools, ",
-            "frequent stools, ",
-            "and urgency to pass stool."
+            "Symptoms of active ulcerative colitis can include: <ul><li>abdominal cramps,</li><li>bloody stools,</li><li>frequent stools,</li><li>and urgency to pass stool.</li></ul>"
         ],
         "slide03":
         [
             "Ulcerative colitis (UC) patients are often treated with medication to control the inflammation and relieve their symptoms, but when these don’t work for the patient, surgical treatment of the digestive tract may be recommended.",
             "<a href='#' onclick='showNextNode(`01c1`)'>Click here to learn about the anatomy involved</a>",
             "<a href='#' onclick='showNextNode(`03a0`)'>Click here to learn about medications for UC</a>",
-            "<a href='https://pie.med.utoronto.ca/TVASurg/project/surgical-treatment-for-ulcerative-colitis/' target='_blank'>Click here to learn about surgical treatment options for UC</a>"
+            "<a href='https://pie.med.utoronto.ca/TVASurg/project/surgical-treatment-for-ulcerative-colitis/' target='_blank'>Click here to learn about surgical treatment options for UC (video)</a>"
         ]
     },
     "media":
@@ -105,7 +102,7 @@
         [
             "The colon (large intestine) is a tube-shaped organ about 5 feet in length, that absorbs water from the stool, to change its consistency from liquid to solid stool, and the rectum.",
             "The colon ends in the rectum, where stool is stored until it is ready to be passed. The anus is a ring of muscle (called the anal sphincter) that relaxes to allow stool to pass out of the body. ",
-            "<a href='#' onclick='showNextNode(`01c2`)'>Click here to learn about female reproductive anatomy</a>"
+            "***straightThroughFlag***nextNode***01c2"
         ]
     },
     "media":
@@ -131,8 +128,8 @@
         ],
         "slide02":
         [
+            "<a href='#' onclick='dynamicShowNextNode(`01c2`)'>Click here to explore surgical options.</a>",
             "<a href='#' onclick='backToMainMenu()'>Click here to return to the Main Menu.</a>",
-
             "To learn more about ulcerative colitis (UC) disease and surgical treatment options, check out the video <a target='_blank' href='https://pie.med.utoronto.ca/TVASurg/project/surgical-treatment-for-ulcerative-colitis/'>linked here </a>"
         ]
     },
@@ -143,9 +140,38 @@
     }
     },
     {
-    "nodeID" : "02a0",
+    "nodeID" : "02a1",
+    "exitNodes":["02b0","02c0"],
+    "heading": "Pre and Post surgery",
+    "content": 
+    {
+        "slide01":
+        [
+            "Before any surgery, you will be prepped on the OR bed and given anesthesia to fall asleep. A breathing tube and urinary catheter will also be placed."
+        ],
+        "slide02":
+        [
+            "There are different types of surgical approaches that might be used.<ul><li>Open surgery is the traditional approach, where a single large incision will be made.</li><li>Laparoscopic surgery involves several smaller incisions.</li><li>In some cases, your surgeon may determine that a transanal approach is the best option.</li></ul>"
+        ],
+        "slide03":
+        [
+            "Following surgery, you will recover in the hospital for a few days. Once you are discharged, you will continue to recover at home.",
+            "After you have recovered from your surgery, you will continue to have follow up visits with your surgical care team. Any subsequent surgeries will be planned as needed.",
+            "***straightThroughFlag***nextNode***02a2"
+        ]
+       
+    },
+    "media":
+    {
+        "slide01":"",
+        "slide02":"",
+        "slide03":""
+    }
+    },
+    {
+    "nodeID" : "02a2",
     "exitNodes":["02a1","02a2","02b0","02c2","07c0"],
-    "heading": "No Prior UC surgery",
+    "heading": "Surgical Options for Ulcerative Colitis",
     "content": 
     {
         "slide01":
@@ -163,9 +189,8 @@
         "slide04":
         [
             "If you have, or had, a surgery that removed the entire colon including the rectum and anus (a total proctocolectomy), a J pouch is no longer an option, but pregnancy can still be possible. ",
-            "<a href='#' onclick='showNextNode(`02a1`)'>Click here to learn about the J pouch</a>",
-            "<a href='#' onclick='showNextNode(`02b0`)'>Click here to learn about complete colon removal</a>",
-            "<a href='#' onclick='showNextNode(`02a2`)'>Skip to the pre- and post-surgery summary</a>"
+            "<a href='#' onclick='showNextNode(`02a3`)'>Click here to learn about the J pouch option</a>",
+            "<a href='#' onclick='showNextNode(`02a4`)'>Click here to learn about the End ostomy option</a>"
         ]
     },
     "media":
@@ -177,9 +202,9 @@
     }
     },            
     {
-    "nodeID" : "02a1",
+    "nodeID" : "02a3",
     "exitNodes":["02a2"],
-    "heading": "J-pouch overview",
+    "heading": "J pouch option",
     "content": 
     {
         "slide01":
@@ -225,7 +250,9 @@
         "slide09":
         [
             "If done in 3 stages, a temporary stoma will remain in place after the J pouch creation, allowing the pouch time to heal before the 3rd surgery which is the closure of the stoma.",
-            "There are specific implications for the J-pouch surgery in patients who are trying to conceive, who are pregnant, and during delivery which we will explain in detail."
+            "There are specific implications for the J-pouch surgery in patients who are trying to conceive, who are pregnant, and during delivery which we will explain in detail.",
+            "<a href='#' onclick='showNextNode(`02c0`)'>Click here to learn about the first stage of the J pouch option</a>",
+            "<a href='#' onclick='dynamicShowNextNode(`02a3`)'>Click here to learn more about considerations specific to your pregnancy status</a>"
             
         ]
     },
@@ -241,37 +268,31 @@
         "slide08":"",
         "slide09":""
     }
-    },    
+    },
     {
-    "nodeID" : "02a2",
-    "exitNodes":["02b0","02c0"],
-    "heading": "Pre and Post surgery",
+    "nodeID" : "02a4",
+    "exitNodes":["02a1","02a2","02b0","02c2","07c0"],
+    "heading": "End ostomy (Total proctocolectomy) option",
     "content": 
     {
         "slide01":
         [
-            "Before any surgery, you will be prepped on the OR bed and given anesthesia to fall asleep. A breathing tube and urinary catheter will also be placed."
+            "The goal of a complete colon removal (total proctocolectomy) surgery is to remove the diseased tissue affected by ulcerative colitis–the entire colon (large intestine), including the rectum and anus, while most of the small intestine remains."
         ],
         "slide02":
         [
-            "There are different types of surgical approaches that might be used.",
-            "Open surgery is the traditional approach, where a single large incision will be made.",
-            "Laparoscopic surgery involves several smaller incisions.",
-            "In some cases, your surgeon may determine that a transanal approach is the best option."
+            "The remaining small intestine is then re-routed to an opening in the abdominal wall–an ostomy (or stoma). The patient then passes stool into an ostomy bag.",
+            "This surgical treatment option can be done in 1 surgery, or 2 surgeries spaced apart."
         ],
         "slide03":
         [
-            "Following surgery, you will recover in the hospital for a few days. Once you are discharged, you will continue to recover at home.",
-            "After you have recovered from your surgery, you will continue to have follow up visits with your surgical care team. Any subsequent surgeries will be planned as needed."
+            "For patients who are also balancing the medical concerns of fertility and pregnancy, it’s important to be aware that the permanent end ostomy (total proctocolectomy) surgical treatment option for ulcerative colitis (UC) takes place deep in the pelvis, near the female reproductive organs."           
         ],
         "slide04":
         [
-            "Advocate for your options and your own preferences! Come prepared to your appointments with lists of goals and questions. The following modules can help you prepare question lists:",
-            "<a href='#' onclick='showNextNode(`02b0`)'>Click here to learn about having a complete colon removal and permanent stoma</a>",
-            "<a href='#' onclick='showNextNode(`02c0`)'>Click here to learn about having the first stage of ulcerative colitis (UC) surgical treatment for J pouch</a>",
-            "For more considerations specific to your situation,<ul><li><a href='#' onclick='showNextNode(`04a0`)'>Click here to learn about Fertility Considerations - no UC surgery</a></li><li><a href='#' onclick='showNextNode(`05a0`)'>Click here to learn about Pregnancy Considerations - no UC surgery</a></li><li><a href='#' onclick='showNextNode(`06a0`)'>Click here to learn about Delivery Considerations - no UC surgery</a></li></ul>"
-            
-
+            "It is possible to have a first-stage partial colon removal done first, called a subtotal colectomy. This surgery does not typically affect fertility. Patients can then pursue a pregnancy, given birth, and have the colon removal completed (total proctocolectomy) later, after they have gone through pregnancy and delivery.",
+            "<a href='#' onclick='showNextNode(`02b0`)'>Click here to learn about the complete colon removal option with permanent stoma</a>",
+            "<a href='#' onclick='dynamicShowNextNode(`02a4`)'>Click here to learn more about considerations specific to your pregnancy status</a>"
         ]
     },
     "media":
@@ -281,7 +302,7 @@
         "slide03":"",
         "slide04":""
     }
-    },
+    },         
     {
     "nodeID" : "02b0",
     "exitNodes":["02b1","02b2","07b0"],
@@ -293,7 +314,7 @@
             "One option for surgical treatment of ulcerative colitis (UC) is complete colon removal with a resulting permanent stoma, also called an ileostomy, end ileostomy, or simply, ostomy. Anyone with an ostomy may run into issues with blockage or obstruction. ",
             "This “proctocolectomy” surgery, or sometimes called “total proctocolectomy”, includes a total colectomy, removal of the entire colon, and proctectomy, removal of the rectum, as well as removal of the anus.",
             "If you have had a complete colon removal surgery (total proctocolectomy), or were told you no longer have J-pouch as an option, then you don’t need to think about further ulcerative colitis surgeries.",
-            "Click on the <strong> More Options </strong> below to learn more."
+            "<a href='#' onclick='dynamicShowNextNode(`02b0`)'>Click here to learn more about considerations specific to your pregnancy or surgical status</a>"
         ]
     },
     "media":
@@ -316,7 +337,10 @@
         "slide02":
         [
             "Regardless of how you arrived at a permanent end ileostomy, if any issues with fertility come up, you still have the option to discuss Assisted Reproductive Therapies (ART), such as IVF, or other treatments, with a fertility specialist.",
-            "Click below to explore further considerations given this point in your ulcerative colitis (UC) surgery treatment:,<ul><li><a href='#' onclick='showNextNode(`04f0`)'>Click here to learn about ART treatments</a></li><li><a href='#' onclick='showNextNode(`04b0`)'>Click here to learn about Fertility Considerations with Total Proctocolectomy</a></li><li><a href='#' onclick='showNextNode(`05b0`)'>Click here to learn about Pregnancy Considerations with Total Proctocolectomy</a></li></ul>"          
+            "Click below to explore further considerations given this point in your ulcerative colitis (UC) surgery treatment:",
+            "<a href='#' onclick='showNextNode(`04f0`)'>Click here to learn about ART treatments</a>",
+            "<a href='#' onclick='showNextNode(`04b0`)'>Click here to learn about Fertility Considerations with Total Proctocolectomy</a>",
+            "<a href='#' onclick='showNextNode(`05b0`)'>Click here to learn about Pregnancy Considerations with Total Proctocolectomy</a>>"          
         ]
     },
     "media":
@@ -337,7 +361,10 @@
             "You may find the ileostomy changing shape during pregnancy, and you may need to resize your appliance or speak with your ostomy nurse or surgery and GI teams.",
             "While uncommon, some people may experience ileostomy prolapse, or obstruction. Either may require admission to hospital and IV fluids and surgical monitoring. ",
             "Your OB and GI will monitor you closely for nutritional needs, and any complications. ",
-            "Click below to explore further considerations given this point in your ulcerative colitis (UC) surgery treatment:,<ul><li><a href='#' onclick='showNextNode(`05b0`)'>Click here to learn about Pregnancy Considerations with Total Proctocolectomy</a></li><li><a href='#' onclick='showNextNode(`06b0`)'>Click here to learn about Delivery Considerations with Total Proctocolectomy</a></li></ul>"  
+            "Click below to explore further considerations given this point in your ulcerative colitis (UC) surgery treatment:",
+            "<a href='#' onclick='showNextNode(`05b0`)'>Click here to learn about Pregnancy Considerations with Total Proctocolectomy</a>",
+            "<a href='#' onclick='showNextNode(`06b0`)'>Click here to learn about Delivery Considerations with Total Proctocolectomy</a>"
+            
         ]
     },
     "media":
@@ -358,7 +385,9 @@
         "slide02":
         [
             "After a subtotal colectomy, the rectum and anus remain so that they can be reconnected later. At this point, you have the option to pursue a J-pouch, or to have your rectum and anus removed and live with a permanent stoma (end ileostomy)",
-            "Click below to explore further considerations given this point in your ulcerative colitis (UC) surgery treatment:,<ul><li><a href='#' onclick='showNextNode(`02ci`)'>Click here to learn about the J pouch option</a></li><li><a href='#' onclick='showNextNode(`02cii`)'>Click here to learn about the End Ileostomy option</a></li></ul>"
+            "Click below to explore further considerations given this point in your ulcerative colitis (UC) surgery treatment:",
+            "<a href='#' onclick='showNextNode(`02ci`)'>Click here to learn about the J pouch option</a>",
+            "<a href='#' onclick='showNextNode(`02cii`)'>Click here to learn about the End Ileostomy option</a>"
         ]
     },
     "media":
@@ -391,7 +420,7 @@
     {
     "nodeID" : "02cii",
     "exitNodes":["02ci","02ciii"],
-    "heading": "End ostomy option",
+    "heading": "End Ileostomy option",
     "content": 
     {
         "slide01":
@@ -410,13 +439,13 @@
     {
     "nodeID" : "02ciii",
     "exitNodes":["02c1","02c2","07c0"],
-    "heading": "Either option (J pouch or end ostomy)",
+    "heading": "Either option (J pouch or end ileostomy)",
     "content": 
     {
         "slide01":
         [
             "With either ulcerative colitis (UC) surgical treatment option (permanent stoma or J pouch), you will have a stoma/ostomy for a period of time, either permanently or temporarily. Anyone with an ostomy may run into issues with blockage or obstruction. ",
-            "Click on the <strong> More Options </strong> menu to learn about other considerations for surgery."
+            "<a href='#' onclick='dynamicShowNextNode(`02ciii`)'>Click here to learn more about considerations specific to your pregnancy status</a>"
         ]
     },
     "media":
@@ -483,7 +512,7 @@
             "If you have had one or two surgeries to treat your ulcerative colitis, you have a J-pouch but still have an ostomy, then you have one more surgery to go to complete the surgical treatment plan for ulcerative colitis.",
             "When you have a J pouch and an ileostomy, this is a special kind of temporary ileostomy called a “loop” or “diverting” ileostomy, which has two openings rather than just one. Anyone with an ostomy may run into issues with blockage or obstruction.",
             "There are specific implications for the J-pouch surgery in patients who are trying to conceive, who are pregnant, and during delivery. If you’ve had a J pouch made, then you’ve had a deep pelvic surgery, and fertility may have been affected.",
-            "Click on the <strong> More Options </strong> menu to explore further considerations given this point in your ulcerative colitis (UC) surgery treatment."
+            "<a href='#' onclick='dynamicShowNextNode(`02d0`)'>Click here to learn more about considerations specific to your pregnancy status</a>"
         ]
     },
     "media":
@@ -543,7 +572,7 @@
             "If you have had 2 or 3 surgeries to treat your ulcerative colitis, you have a functioning J-pouch and no longer have an ostomy (if you had one), then you have completed the surgical treatment plan for ulcerative colitis.  ",
             "It’s important to be aware that the J pouch surgical treatment option for ulcerative colitis (UC) included earlier surgical steps that took place deep in the pelvis, which may have affected reproductive anatomy.",
             "There are specific implications for the J-pouch surgery in patients who are trying to conceive, who are pregnant, and during delivery. ",
-            "Click on the <strong> More Options </strong> menu to explore further considerations given this point in your ulcerative colitis (UC) surgery treatment."
+            "<a href='#' onclick='dynamicShowNextNode(`02e0`)'>Click here to learn more about considerations specific to your pregnancy status</a>"
         ]
     },
     "media":
@@ -560,7 +589,10 @@
         "slide01":
         [
             "Following J pouch completion surgery, your fertility may have been affected by an earlier stage, so if you are having difficulties conceiving, you may want to discuss Artificial Reproductive Therapies (ART), such as IVF, or other treatments, with a Fertility specialist.",
-            "Click below to explore further considerations given this point in your ulcerative colitis (UC) surgery treatment:,<ul><li><a href='#' onclick='showNextNode(`04e0`)'>Click here to learn about Fertility Considerations with a completed J pouch</a></li><li><a href='#' onclick='showNextNode(`04f0`)'>Click here to learn about ART Treatments</a></li><li><a href='#' onclick='showNextNode(`05e0`)'>Click here to learn about Pregnancy Considerations with a J pouch</a></li></ul>"
+            "Click below to explore further considerations given this point in your ulcerative colitis (UC) surgery treatment:",
+            "<a href='#' onclick='showNextNode(`04e0`)'>Click here to learn about Fertility Considerations with a completed J pouch</a>",
+            "<a href='#' onclick='showNextNode(`04f0`)'>Click here to learn about ART Treatments</a>",
+            "<a href='#' onclick='showNextNode(`05e0`)'>Click here to learn about Pregnancy Considerations with a J pouch</a>"
         ]
     },
     "media":
@@ -615,7 +647,7 @@
     },
     {
     "nodeID" : "04a0",
-    "exitNodes":["02a0","04f0","05a0","08a0"],
+    "exitNodes":["02a1","04f0","05a0","08a0"],
     "heading": "Fertility considerations: No UC surgery",
     "content": 
     {
@@ -644,7 +676,7 @@
             "Approximately 40–50% of people who have J pouch surgery, or any surgery deep in the pelvis, may find it difficult to conceive naturally as a result.",
             "Conception is still possible with fertility treatments that bypass the fallopian tubes, such as IVF.",
             "If you’re planning surgery and hoping to become pregnant in the future, discuss timing and fertility preservation with your care team. Timing for surgery and pregnancy/pregnancies will be coordinated on an individual basis to optimize your ulcerative colitis (UC) health while working within your family planning goals. ",
-            "<a href='#' onclick='showNextNode(`02a0`)'>Click here to learn about Surgical options if you had no prior surgery</a>",
+            "<a href='#' onclick='showNextNode(`02a1`)'>Click here to learn about Surgical options if you had no prior surgery</a>",
             "<a href='#' onclick='showNextNode(`04f0`)'>Click here to learn about ART treatments</a>",
             "<a href='#' onclick='showNextNode(`05a0`)'>Click here to learn about Pregnancy Considerations</a>"
         ]
@@ -727,7 +759,7 @@
             "Evidence shows any surgery that takes place deep in the pelvis can affect spontaneous natural conception by up to 40-50%, but conception is still possible.",
             "Scar tissue and adhesions due to surgery can affect the fallopian tubes and therefore the passage of eggs from the ovary to uterus. This is regardless of the method of surgery, whether laparoscopic or open.",
             "For those who have had a surgery that took place deep in the pelvis, such as J pouch creation surgery, and are having difficulty conceiving, assisted reproductive technologies, like IVF, where eggs are retrieved from the ovaries and then later implanted, could be considered.",
-            "<a href='#' onclick='showNextNode(`02e1`)'>Click here to learn about J pouch completion before pregnancy</a>",
+            "<a href='#' onclick='showNextNode(`02d1`)'>Click here to learn about J pouch completion before pregnancy</a>",
             "<a href='#' onclick='showNextNode(`04f0`)'>Click here to learn about ART treatments</a>",
             "<a href='#' onclick='showNextNode(`05d0`)'>Click here to learn about Pregnancy Considerations with a J pouch and ostomy</a>"
         ]
@@ -754,9 +786,10 @@
             "Evidence shows any surgery that takes place deep in the pelvis can affect spontaneous natural conception by up to 40-50%, but conception is still possible.",
             "Scar tissue and adhesions due to surgery can affect the fallopian tubes and therefore the passage of eggs from the ovary to uterus. This is regardless of the method of surgery, whether laparoscopic or open.",
             "For those who have had a surgery that took place deep in the pelvis, such as those who already have a functioning J pouch, and are having difficulty conceiving, assisted reproductive technologies, like IVF, where eggs are retrieved from the ovaries and then later implanted, could be considered.",
+            "<a href='#' onclick='showNextNode(`02e1`)'>Click here to learn J pouch completion before pregnancy</a>",
             "<a href='#' onclick='showNextNode(`04f0`)'>Click here to learn about ART Treatments</a>",
-            "<a href='#' onclick='showNextNode(`05e0`)'>Click here to learn about Pregnancy Considerations with a J pouch</a>",
-            "<a href='#' onclick='showNextNode(`08c0`)'>Click here to learn about Planning and Support with a J pouch</a>"
+            "<a href='#' onclick='showNextNode(`05e0`)'>Click here to learn about Pregnancy Considerations with a J pouch</a>"
+            
         ]
     },
     "media":
@@ -777,7 +810,7 @@
             "In Vitro Fertilization (IVF) involves taking eggs from your ovaries, and combining them with sperm in a lab. Resulting fertilized embryos can then be implanted in your uterus.",
             "If you’re planning surgery and hoping to become pregnant in the future, discuss timing and fertility preservation with your care team. ",
             "<a href='https://mountsinaifertility.com/' target='_blank'>Click here to visit the Mount Sinai Fertility Clinic site</a>",
-            "<a href='#' onclick='showNextNode(`05a0`)'>Click here to learn about Pregnancy Considerations with no prior surgery</a>",
+            "<a href='#' onclick='dynamicShowNextNode(`04f0`)'>Click here to learn more about considerations specific to your surgical status</a>",
             "<a href='#' onclick='showNextNode(`08a0`)'>Click here to access the Planning and Support section</a>"
             
        
@@ -936,6 +969,7 @@
         "slide02":
         [
             "The decision to proceed with a vaginal or caesarean delivery is individualized - yourself, your obstetrician, gastroenterologist, and surgeon will help you choose the safest approach for you and your baby.",
+            "<a href='#' onclick='showNextNode(`05a0`)'>Click here to learn Pregnancy Considerations with no prior surgeries</a>",
             "<a href='#' onclick='showNextNode(`07a0`)'>Click here to learn Postpartum Considerations with no prior surgeries</a>",
             "<a href='https://pie.med.utoronto.ca/TVASurg/project/patient-teaching-vaginal-birth/' target='_blank'>Click here to visit the Vaginal Birth educational module</a>",
             "<a href='https://pie.med.utoronto.ca/TVASurg/project/pe-csection/' target='_blank'>Click here to visit the C-section educational modulee</a>"
@@ -962,6 +996,7 @@
         "slide02":
         [
             "The decision to proceed with a vaginal or caesarean delivery is individualized - yourself, your obstetrician, gastroenterologist, and surgeon will help you choose the safest approach for you and your baby.",
+            "<a href='#' onclick='showNextNode(`05b0`)'>Click here to learn Pregnancy Considerations with a Total Proctocolectomy</a>",
             "<a href='#' onclick='showNextNode(`07b0`)'>Click here to learn Postpartum Considerations with a Total Proctocolectomy </a>",
             "<a href='https://pie.med.utoronto.ca/TVASurg/project/patient-teaching-vaginal-birth/' target='_blank'>Click here to visit the Vaginal Birth educational module</a>",
             "<a href='https://pie.med.utoronto.ca/TVASurg/project/pe-csection/' target='_blank'>Click here to visit the C-section educational modulee</a>"
@@ -988,6 +1023,7 @@
         "slide02":
         [
             "The decision to proceed with a vaginal or caesarean delivery is individualized - yourself, your obstetrician, gastroenterologist, and surgeon will help you choose the safest approach for you and your baby.",
+            "<a href='#' onclick='showNextNode(`05c0`)'>Click here to learn Pregnancy Considerations with a Subtotal Colectomy</a>",
             "<a href='#' onclick='showNextNode(`07c0`)'>Click here to learn Postpartum Considerations with a Subtotal Colectomy</a>",
             "<a href='https://pie.med.utoronto.ca/TVASurg/project/patient-teaching-vaginal-birth/' target='_blank'>Click here to visit the Vaginal Birth educational module</a>",
             "<a href='https://pie.med.utoronto.ca/TVASurg/project/pe-csection/' target='_blank'>Click here to visit the C-section educational modulee</a>"
@@ -1016,9 +1052,10 @@
         "slide02":
         [
             "The decision to proceed with a vaginal or caesarean delivery is individualized - yourself, your obstetrician, gastroenterologist, and surgeon will help you choose the safest approach for you and your baby. ",
+            "<a href='#' onclick='showNextNode(`05d0`)'>Click here to learn Pregnancy Considerations with a J pouch</a>",
             "<a href='#' onclick='showNextNode(`07d0`)'>Click here to learn Postpartum Considerations with a J pouch</a>",
             "<a href='https://pie.med.utoronto.ca/TVASurg/project/patient-teaching-vaginal-birth/' target='_blank'>Click here to visit the Vaginal Birth educational module</a>",
-            "<a href='https://pie.med.utoronto.ca/TVASurg/project/pe-csection/' target='_blank'>Click here to visit the C-section educational modulee</a>"
+            "<a href='https://pie.med.utoronto.ca/TVASurg/project/pe-csection/' target='_blank'>Click here to visit the C-section educational module</a>"
         ]
     },
     "media":
@@ -1044,7 +1081,9 @@
         "slide03":
         [
             "Learning about delivery options can help you understand the possible overlapping  complications and anatomy involved. ",
-            "<a href='#' onclick='showNextNode(`08a0`)'>Click here to Planning and Support for no prior surgeries</a>"
+            "<a href='#' onclick='showNextNode(`06a0`)'>Click here to Delivery Considerations for no prior UC surgeries</a>",
+            "<a href='#' onclick='showNextNode(`08a0`)'>Click here to Planning and Support for no prior surgeries</a>",
+            "***reroll***"
         ]
     },
     "media":
@@ -1068,7 +1107,9 @@
         "slide02":
         [
             "Learning about delivery options can help you understand the possible overlapping  complications and anatomy involved.",
-            "<a href='#' onclick='showNextNode(`08b0`)'>Click here to Planning and Support with an ostomy</a>"
+            "<a href='#' onclick='showNextNode(`06b0`)'>Click here to Delivery Considerations for Total Proctocolectomy</a>",
+            "<a href='#' onclick='showNextNode(`08b0`)'>Click here to Planning and Support with an ostomy</a>",
+            "***reroll"
         ]
     },
     "media":
@@ -1095,7 +1136,9 @@
         "slide03":
         [
             "Advocate for your options and your own preferences! Come prepared to your appointments with lists of goals and questions. Learning about delivery options can help you understand the possible overlapping  complications and anatomy involved: ",
-            "<a href='#' onclick='showNextNode(`08b0`)'>Click here to Planning and Support with an ostomy</a>"
+            "<a href='#' onclick='showNextNode(`06c0`)'>Click here to Delivery Considerations for Subtotal Colectomy</a>",
+            "<a href='#' onclick='showNextNode(`08b0`)'>Click here to Planning and Support with an ostomy</a>",
+            "***reroll***"
         ]
     },
     "media":
@@ -1124,7 +1167,9 @@
         "slide03":
         [
             "Advocate for your options and your own preferences! Come prepared to your appointments with lists of goals and questions. Learning about delivery options can help you understand the possible overlapping complications and anatomy involved: ",
-            "<a href='#' onclick='showNextNode(`08c0`)'>Click here to Planning and Support with a J pouch</a>"
+            "<a href='#' onclick='showNextNode(`06d0`)'>Click here to Delivery Considerations for a J pouch</a>",
+            "<a href='#' onclick='showNextNode(`08c0`)'>Click here to Planning and Support with a J pouch</a>",
+            "***reroll***"
         ]
     },
     "media":
@@ -1166,7 +1211,9 @@
             "Remember that every journey is unique – many women with ulcerative colitis (UC) go on to have healthy pregnancies and healthy babies.  ",
             "Work closely with your gastroenterologist, obstetrician, and colorectal surgeon, and advocate for your options and your own preferences. ",
             "If you have questions, don’t hesitate to reach out to your healthcare providers – they’re here to support you every step of the way. Coming prepared to your appointments with questions and starting off by stating your preferences at the beginning of every appointment, can help guide your care.",
-            "<a href='#' onclick='showNextNode(`09a0`)'>Click here to prepare for What to Ask your Care Team</a>"
+            "<a href='#' onclick='showNextNode(`09a0`)'>Click here to prepare for What to Ask your Care Team</a>",
+            "Feel free to explore other parts of this module if you’d like to review or learn more.",
+            "<a href='#' onclick='location.reload()'> Go back to first filter question</a>"
         ]
     },
     "media":
@@ -1206,7 +1253,9 @@
         [
             "Remember that every journey is unique – many women with an ostomy go on to have healthy pregnancies and healthy babies.",
             "If you have questions, don’t hesitate to reach out to your healthcare providers – they’re here to support you every step of the way. Coming prepared to your appointments with questions and starting off by stating your preferences at the beginning of every appointment, can help guide your care. ",
-            "<a href='#' onclick='showNextNode(`09a0`)'>Click here to prepare for What to Ask your Care Team</a>"
+            "<a href='#' onclick='showNextNode(`09a0`)'>Click here to prepare for What to Ask your Care Team</a>",
+            "Feel free to explore other parts of this module if you’d like to review or learn more.",
+            "<a href='#' onclick='location.reload()'> Go back to first filter question</a>"
         ]
     },
     "media":
@@ -1245,7 +1294,9 @@
             "Advocate for your options and your own preferences! Come prepared to your appointments with lists of questions and goals. ",
             "Remember that every journey is unique – many women with ulcerative colitis (UC) and a J-pouch go on to have healthy pregnancies and healthy babies.  ",
             "If you have questions, don’t hesitate to reach out to your healthcare providers – they’re here to support you every step of the way. Coming prepared to your appointments with questions and starting off by stating your preferences at the beginning of every appointment, can help guide your care. ",
-            "<a href='#' onclick='showNextNode(`09a0`)'>Click here to prepare for What to Ask your Care Team</a>"
+            "<a href='#' onclick='showNextNode(`09a0`)'>Click here to prepare for What to Ask your Care Team</a>",
+            "Feel free to explore other parts of this module if you’d like to review or learn more.",
+            "<a href='#' onclick='location.reload()'> Go back to first filter question</a>"
         ]
     },
     "media":
@@ -1290,6 +1341,7 @@
             "Always come prepared to visits with your care team with questions printed or written out in advance. Appointments can feel rushed sometimes, or you might be so lost in thought in the moment that you can’t put words to what you’re feeling, so writing questions out ahead of time and checking them off one by one can help ensure you get all the information you need.",
             "Here are some suggestions on questions to ask, and how to structure your questions: >> LINK to custom PDFs",
             "Consider reloading through this module to explore other options. You can provide different answers to the initial questions that were asked at the beginning of the module to see how that changes the information relevant to you.",
+            "<a href='#' onclick='location.reload()'> Go back to first filter question</a>",
             "<a href='#' onclick='showNextNode(`09b0`)'>Click here access additional Patient Resources</a>"
         ]
     },
@@ -1317,7 +1369,10 @@
             "<a target='_blank' href='https://pmc.ncbi.nlm.nih.gov/articles/PMC7175923/'>Scientific article on management of moderate to severe ulcerative colitis (UC):</a>",
             "<a target='_blank' href='https://jamanetwork.com/journals/jama/article-abstract/2809412?utm_source=openevidence&utm_medium=referral'>Scientific article on ulcerative colitis (UC) diagnosis implications, colectomy surgery, and colon cancer:</a>",
             "<a target='_blank' href='https://pmc.ncbi.nlm.nih.gov/articles/PMC11346859/'>Scientific article on postpartum pouchitis flare:</a>",
-            "<a target='_blank' href='https://journals.lww.com/dcrjournal/fulltext/10.1097/dcr.0000000000004003~patient-preferences-for-vaginal-delivery-versus-cesarean'>Scientific article on delivery with J pouch</a>:"
+            "<a target='_blank' href='https://journals.lww.com/dcrjournal/fulltext/10.1097/dcr.0000000000004003~patient-preferences-for-vaginal-delivery-versus-cesarean'>Scientific article on delivery with J pouch</a>:",
+            "<a href='https://pie.med.utoronto.ca/TVASurg/project/surgical-treatment-for-ulcerative-colitis/' target='_blank'>Click here to learn about surgical treatment options for UC (video)</a>",
+            "<a href='https://pie.med.utoronto.ca/TVASurg/project/patient-teaching-vaginal-birth/' target='_blank'>Click here to visit the Vaginal Birth educational module</a>",
+            "<a href='https://pie.med.utoronto.ca/TVASurg/project/pe-csection/' target='_blank'>Click here to visit the C-section educational modulee</a>"
         ]
     },
     "media":

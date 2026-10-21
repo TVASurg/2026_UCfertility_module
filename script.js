@@ -47,6 +47,20 @@ function init()
 function changePchoice(changeTo)
 {
     pregnantChoice = changeTo;
+    switch (changeTo) {
+        case 0:
+            document.getElementById('pregnancyDropdown').innerHTML = "Before pregnancy";
+            break;
+        case 1:
+            document.getElementById('pregnancyDropdown').innerHTML = "Pregnant";
+            break;
+        case 2:
+            document.getElementById('pregnancyDropdown').innerHTML = "After pregnancy";
+            break;
+    
+        default:
+            break;
+    }
     recalculateMainSection();
 }
 
@@ -72,7 +86,7 @@ function recalculateMainSection()
                    ["Intro to UC and Surgery", "Fertility Considerations", "Surgery in-depth(fertility)", "Planning and Support"],
                    ["01a0"],
                    ["04a0"],
-                   ["02a0"],
+                   ["02a1"],
                    ["03a0"]
                 ]
             }else if (pregnantChoice == 1)
@@ -82,7 +96,7 @@ function recalculateMainSection()
                    ["Intro to UC and Surgery", "Pregnancy Considerations", "Surgery in-depth(pregnancy)", "Planning and Support"], 
                    ["01a0"],
                    ["05a0"],
-                   ["02a0"],
+                   ["02a1"],
                    ["08a0"]
                 ]
 
@@ -93,7 +107,7 @@ function recalculateMainSection()
                    ["Intro to UC and Surgery", "Postpartum Considerations", "Surgery in-depth(postpartum)", "Planning and Support"],
                    ["01a0"],
                    ["07a0"],                   
-                   ["02a0"],
+                   ["02a1"],
                    ["08a0"]
                 ]
 
@@ -269,7 +283,163 @@ function showFirstNode(mainSectionArrayIndex)
     //showNextNode("01c1");
 }
 
+function dynamicShowNextNode(originNode)
+{
+    switch (originNode) {
+        case '01c2':
+            switch (surgeryChoice) {
+                case 0:
+                    showNextNode('02a1');
+                    break;
+                case 1:
+                    showNextNode('02b0');
+                    break;
+                case 2:
+                    showNextNode('02c0');
+                    break;
+                case 3:
+                    showNextNode('02d0');
+                    break;
+                case 4:
+                    showNextNode('02e0');
+                    break;
+                default:
+                    break;
+            }
+            break;
+        case '02a3':
+            switch (pregnantChoice) {
+                case 0:
+                    showNextNode('04a0');
+                    break;
+                case 1:
+                    showNextNode('05a0');
+                    break;
+                case 2:
+                    showNextNode('06a0');
+                    break;
+                default:
+                    break;
+            }
+            break;
+        case '02a4':
+            switch (pregnantChoice) {
+                case 0:
+                    showNextNode('04a0');
+                    break;
+                case 1:
+                    showNextNode('05a0');
+                    break;
+                case 2:
+                    showNextNode('06a0');
+                    break;
+                default:
+                    break;
+            }
+            break;
+        case '02b0':
+            if(surgeryChoice == 0)
+            {
+                showNextNode('07a0');
+            }
+            else if (surgeryChoice == 1)
+            {
+                switch (pregnantChoice) {
+                    case 0:
+                        showNextNode('02b1');
+                        break;
+                    case 1:
+                        showNextNode('02b2');
+                        break;
+                    case 2:
+                        showNextNode('07b0');
+                        break;
+                    default:
+                        break;
+                }
+            }
+            break;
+        case '02ciii':
+            switch (pregnantChoice) {
+                case 0:
+                    showNextNode('02c1');
+                    break;
+                case 1:
+                    showNextNode('02c2');
+                    break;
+                case 2:
+                    showNextNode('07c0');
+                    break;
+                default:
+                    break;
+            }
+            break;
+        case '02d0':
+            switch (pregnantChoice) {
+                case 0:
+                    showNextNode('02d1');
+                    break;
+                case 1:
+                    showNextNode('02d2');
+                    break;
+                case 2:
+                    showNextNode('07d0');
+                    break;
+                default:
+                    break;
+            }
+            break;
+        case '02e0':
+            switch (pregnantChoice) {
+                case 0:
+                    showNextNode('02e1');
+                    break;
+                case 1:
+                    showNextNode('02e2');
+                    break;
+                case 2:
+                    showNextNode('07d0');
+                    break;
+                default:
+                    break;
+            }
+            break;
+        case '04f0':
+            switch (surgeryChoice) {
+                case 0:
+                    showNextNode('05a0');
+                    break;
+                case 1:
+                    showNextNode('05b0');
+                    break;
+                case 2:
+                    showNextNode('05c0');
+                    break;
+                case 3:
+                    showNextNode('05d0');
+                    break;
+                case 4:
+                    showNextNode('05e0');
+                    break;
+                default:
+                    break;
+            }
+            break;
+        default:
+            break;
+    }
+    
+ //switch case
+ //01c2 -> 02a1/02b0/02c0/02d0/02e0 s
+ //02a3 -> 04a0/05a0/06a0 p
+ //02a4 -> 04a0/05a0/06a0 p
+ //02b0 -> 02b1/02b2/07a0/07b0 s p
+ //02ciii -> 02c1/02c2/07c0 p
+ //02d0 -> 02d1/02d2/07d0 p
+ //02e0 -> 02e1/02e2/07d0 p
+ //04f0 -> 05a0/05b0/05c0/05d0/05e0 s
 
+}
 
 function showNextNode(nodeID)
 {
@@ -386,7 +556,7 @@ function parseSingleSlideContent(id, header, content)
 
     //here's the exitnodes
     slideContentHTML += `<div id="exitNodes" class="pt-3 card-footer bg-transparent"><div class="btn-group d-flex dropdown-center" role="group" aria-label="mainContentButtonMenu">`;
-    slideContentHTML += `<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">More options                            </button>`;
+    slideContentHTML += `<button type="button" class="btn btn-secondary rounded" onclick="backToMainMenu()">Go back to Main Menu</button>`;
     slideContentHTML += `<ul class="dropdown-menu">`;
 
     slideContentHTML += setExitNodeButtons(exitNodes);
@@ -415,6 +585,7 @@ function parseSingleSlideContent(id, header, content)
 function parseMultipleSlideContent(id, header, content, noOfSlides)
 {
     currentSlide = 0;
+    var straightThroughNode = "";
     var slideContentHTML = "";
     var slideIndicatorHTML = `<div class="carousel-indicators">`;
 
@@ -471,11 +642,27 @@ function parseMultipleSlideContent(id, header, content, noOfSlides)
 
     content[i].forEach(element =>
     {
-        
-        slideContentHTML += `<li>`;
-        slideContentHTML += element;
-        slideContentHTML += `</li>`
-        
+        //we're receiving the baton from the json file here about straight-through flags
+        //the last 4 characters denotes the node after this node
+
+        if(!element.includes("***straightThroughFlag***") && !element.includes("***reroll***"))
+        {
+            slideContentHTML += `<li>`;
+            slideContentHTML += element;
+            slideContentHTML += `</li>`
+        }
+        else if (element.includes("***straightThroughFlag***"))
+        {
+            straightThroughNode = element.slice(-4);
+        }
+        else if (element.includes("***reroll***"))
+        {//"<a href='#' onclick='showNextNode(`08a0`)'>Click here to access the Planning and Support section</a>",
+            
+            slideContentHTML += '<li>';
+            slideContentHTML += "<a href='#' onclick='changePchoice(0); backToMainMenu()'>";
+            slideContentHTML += 'Would you like information for a future pregnancy?'
+            slideContentHTML += '</a></li>';
+        }
     }
     )
 
@@ -504,16 +691,25 @@ function parseMultipleSlideContent(id, header, content, noOfSlides)
     //finalize and then add in the indicators here
     slideIndicatorHTML += `</div>`;
 
-    //here's the exitnodes
+    //here's the prevNext arrows
     slideContentHTML += `<div id="exitNodes" class="bg-transparent">`;
     slideContentHTML += `<div class="btn-group d-flex my-2 mx-5" role="group" >`;
     slideContentHTML += `<button id="prevSlideBtn" onclick="togglePrevNextButtonStatus('prev', `+ noOfSlides + `)" type="button" class="btn btn-secondary disabled" data-bs-target="#mainCarousel" data-bs-slide="prev"> < </button>`;
 
-    slideContentHTML += `<button id="nextSlideBtn" onclick="togglePrevNextButtonStatus('next', `+ noOfSlides + `)" type="button" class="btn btn-secondary" data-bs-target="#mainCarousel" data-bs-slide="next"> > </button>`;
+    //the next arrow 'can' be leading to a straight-through node if the flag is set in json
+    if (straightThroughNode != ""){
+
+        slideContentHTML += `<button id="nextSlideBtn" onclick="togglePrevNextButtonStatus('next', `+ noOfSlides + `,'`+ straightThroughNode +`')" type="button" class="btn btn-secondary" data-bs-target="#mainCarousel" data-bs-slide="next"> > </button>`;
+
+    }else if (straightThroughNode == "")
+    {
+        slideContentHTML += `<button id="nextSlideBtn" onclick="togglePrevNextButtonStatus('next', `+ noOfSlides + `)" type="button" class="btn btn-secondary" data-bs-target="#mainCarousel" data-bs-slide="next"> > </button>`;
+    }
+    
     slideContentHTML += `</div>`;
     slideContentHTML += `</div>`;
 
-        slideContentHTML += `<div class="btn-group dropup-center dropup d-flex my-2 mx-5"><button type="button" class=" btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">More options                            </button>`;
+    slideContentHTML += `<div class="btn-group dropup-center dropup d-flex my-2 mx-5"><button type="button" class=" btn btn-secondary rounded" onclick="backToMainMenu()">Go back to Main Menu</button>`;
     slideContentHTML += `<ul class="dropdown-menu">`;
 
     slideContentHTML += setExitNodeButtons(exitNodes);
@@ -557,18 +753,31 @@ function parseMultipleSlideContent(id, header, content, noOfSlides)
     document.getElementById("contentProper").innerHTML = slideContentHTML;
 }
 
-function togglePrevNextButtonStatus(direction, noOfSlides)
+function togglePrevNextButtonStatus(direction, noOfSlides, straightThroughNode)
 {
     if (direction == "next")
     {
+
         currentSlide ++;
         if (currentSlide > 0)
         {
             document.getElementById("prevSlideBtn").classList.remove("disabled");
         }
-        if (currentSlide == (noOfSlides -1))
+        
+        if (straightThroughNode == null) 
+        //so if this is the end of the carousel, and there's no straight-through, disable the next button
         {
-            document.getElementById("nextSlideBtn").classList.add("disabled");
+            if (currentSlide == (noOfSlides -1))
+            {
+                document.getElementById("nextSlideBtn").classList.add("disabled");
+            }   
+        }else if (straightThroughNode != null)
+        {
+            if (currentSlide == (noOfSlides -1))
+            {
+                var nextNode = 'showNextNode("' + straightThroughNode + '")';
+                document.getElementById("nextSlideBtn").setAttribute('onclick', nextNode);;
+            }   
         }
     }
     else if (direction == "prev")
@@ -597,7 +806,7 @@ function filterExitNodes (exitNodeArray, pChoice, sChoice)
                     "01c1",
                     "01c2",
                     "03a0",
-                    "02a0",
+                    "02a1",
                     "02a1",
                     "02a2",
                     "02b0",
@@ -620,7 +829,7 @@ function filterExitNodes (exitNodeArray, pChoice, sChoice)
                     "01c2",
                     "03a0",
 
-                    "02a0",
+                    "02a1",
                     "02a1",
                     "02a2",
                     "02c0",
@@ -645,7 +854,7 @@ function filterExitNodes (exitNodeArray, pChoice, sChoice)
                     "01c2",
                     "03a0",
 
-                    "02a0",
+                    "02a1",
                     "02a1",
                     "02a2",
                     "02c0",
