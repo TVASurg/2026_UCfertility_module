@@ -642,21 +642,36 @@ function parseMultipleSlideContent(id, header, content, noOfSlides)
 
     content[i].forEach(element =>
     {
-        //we're receiving the baton from the json file here about straight-through flags
-        //the last 4 characters denotes the node after this node
-
+        //normal list items would go through this
         if(!element.includes("***straightThroughFlag***") && !element.includes("***reroll***"))
         {
-            slideContentHTML += `<li>`;
-            slideContentHTML += element;
-            slideContentHTML += `</li>`
+            //if just text
+            if (element.includes("</a>") == false)
+            {
+                slideContentHTML += `<li>`;
+                slideContentHTML += element;
+                slideContentHTML += `</li>`
+            }
+
+            //if is the first link
+            //if is second link and beyond
+            else if ( element.includes("</a>") == true)
+            {
+                slideContentHTML += `<li class="list-unstyled">`;
+                slideContentHTML += element;
+                slideContentHTML += `</li>`
+            }
         }
+        //we're receiving the baton from the json file here about straight-through flags
+        //the last 4 characters denotes the node after this node
         else if (element.includes("***straightThroughFlag***"))
         {
             straightThroughNode = element.slice(-4);
         }
+
+        //rerolling basically changes the pchoice back to 0, and reloads mainMenu
         else if (element.includes("***reroll***"))
-        {//"<a href='#' onclick='showNextNode(`08a0`)'>Click here to access the Planning and Support section</a>",
+        {
             
             slideContentHTML += '<li>';
             slideContentHTML += "<a href='#' onclick='changePchoice(0); backToMainMenu()'>";
