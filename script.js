@@ -558,9 +558,9 @@ function parseSingleSlideContent(id, header, content)
             //if is second link and beyond
             else if ( bulletPoint.startsWith("<a href") == true)
             {
-                slideContentHTML += `<div class="btn btn-secondary my-2 inTextLink d-block">`;
+                slideContentHTML += `<li class="list-unstyled">`;
                 slideContentHTML += bulletPoint;
-                slideContentHTML += `</div>`
+                slideContentHTML += `</li>`
             }
         })
     }
@@ -672,9 +672,9 @@ function parseMultipleSlideContent(id, header, content, noOfSlides)
             //if is second link and beyond
             else if ( element.startsWith("<a href") == true)
             {
-                slideContentHTML += `<div class="btn btn-secondary my-2 inTextLink d-block">`;
+                slideContentHTML += `<li class="list-unstyled">`;
                 slideContentHTML += element;
-                slideContentHTML += `</div>`
+                slideContentHTML += `</li>`
             }
         }
         //we're receiving the baton from the json file here about straight-through flags
