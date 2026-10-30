@@ -544,9 +544,24 @@ function parseSingleSlideContent(id, header, content)
     content.forEach((element,index) =>
     {
         element.forEach(bulletPoint =>{
-        slideContentHTML += `<li>`;
-        slideContentHTML += bulletPoint;
-        slideContentHTML += `</li>`
+        // slideContentHTML += `<li>`;
+        // slideContentHTML += bulletPoint;
+        // slideContentHTML += `</li>`
+        if (bulletPoint.startsWith("<a href") == false)
+            {
+                slideContentHTML += `<li>`;
+                slideContentHTML += bulletPoint;
+                slideContentHTML += `</li>`
+            }
+
+            //if is the first link
+            //if is second link and beyond
+            else if ( bulletPoint.startsWith("<a href") == true)
+            {
+                slideContentHTML += `<div class="btn btn-secondary my-2 inTextLink d-block">`;
+                slideContentHTML += bulletPoint;
+                slideContentHTML += `</div>`
+            }
         })
     }
     )
@@ -646,7 +661,7 @@ function parseMultipleSlideContent(id, header, content, noOfSlides)
         if(!element.includes("***straightThroughFlag***") && !element.includes("***reroll***"))
         {
             //if just text
-            if (element.includes("</a>") == false)
+            if (element.startsWith("<a href") == false)
             {
                 slideContentHTML += `<li>`;
                 slideContentHTML += element;
@@ -655,11 +670,11 @@ function parseMultipleSlideContent(id, header, content, noOfSlides)
 
             //if is the first link
             //if is second link and beyond
-            else if ( element.includes("</a>") == true)
+            else if ( element.startsWith("<a href") == true)
             {
-                slideContentHTML += `<li class="list-unstyled">`;
+                slideContentHTML += `<div class="btn btn-secondary my-2 inTextLink d-block">`;
                 slideContentHTML += element;
-                slideContentHTML += `</li>`
+                slideContentHTML += `</div>`
             }
         }
         //we're receiving the baton from the json file here about straight-through flags

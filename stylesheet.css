@@ -49,3 +49,9 @@ a {
 {
 text-decoration: underline;
 }
+
+.inTextLink a
+{
+text-decoration: none; 
+color:white;   
+}

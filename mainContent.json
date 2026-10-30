@@ -130,7 +130,7 @@
         [
             "<a href='#' onclick='dynamicShowNextNode(`01c2`)'>Click here to explore surgical options.</a>",
             "<a href='#' onclick='backToMainMenu()'>Click here to return to the Main Menu.</a>",
-            "To learn more about ulcerative colitis (UC) disease and surgical treatment options, check out the video <a target='_blank' href='https://pie.med.utoronto.ca/TVASurg/project/surgical-treatment-for-ulcerative-colitis/'>linked here </a>"
+            "<a href='https://pie.med.utoronto.ca/TVASurg/project/surgical-treatment-for-ulcerative-colitis/'target='_blank' >To learn more about ulcerative colitis (UC) disease and surgical treatment options, check out the video linked here </a>"
         ]
     },
     "media":
@@ -637,7 +637,7 @@
             "Studies have shown that the activity of your ulcerative colitis (UC) when you conceive can impact how your pregnancy goes.",
             "<a href='#' onclick='showNextNode(`08a0`)'>Click here to access the Planning and Support section</a>",
             "<a href='#' onclick='showNextNode(`09a0`)'>Click here to learn What to Ask your Care Team</a>",
-            "<a target='_blank' href='https://pregnancy.ibdclinic.ca/resource/ibd-medications-and-pregnancy/'>Click here to learn more about IBD medications and pregnancy.</a>"
+            "<a href='https://pregnancy.ibdclinic.ca/resource/ibd-medications-and-pregnancy/' target='_blank' >Click here to learn more about IBD medications and pregnancy.</a>"
         ]
     },
     "media":
@@ -1363,13 +1363,13 @@
         "slide01":
         [
             "Here are some additional resources you may find helpful.",
-            "<a target='_blank' href='https://www.pianostudy.org/conference.php'>The Global Consensus PIANO study is a national study of women with IBD and their children.</a>",
-            "<a target='_blank' href='https://pregnancy.ibdclinic.ca/'>Sinai IBD Clinic website</a>",
-            "<a target='_blank' href='https://pregnancy.ibdclinic.ca/resource/ibd-medications-and-pregnancy/'>Sinai IBD Clinic website page for medications and pregnancy:</a>",
-            "<a target='_blank' href='https://pmc.ncbi.nlm.nih.gov/articles/PMC7175923/'>Scientific article on management of moderate to severe ulcerative colitis (UC):</a>",
-            "<a target='_blank' href='https://jamanetwork.com/journals/jama/article-abstract/2809412?utm_source=openevidence&utm_medium=referral'>Scientific article on ulcerative colitis (UC) diagnosis implications, colectomy surgery, and colon cancer:</a>",
-            "<a target='_blank' href='https://pmc.ncbi.nlm.nih.gov/articles/PMC11346859/'>Scientific article on postpartum pouchitis flare:</a>",
-            "<a target='_blank' href='https://journals.lww.com/dcrjournal/fulltext/10.1097/dcr.0000000000004003~patient-preferences-for-vaginal-delivery-versus-cesarean'>Scientific article on delivery with J pouch</a>:",
+            "<a href='https://www.pianostudy.org/conference.php'  target='_blank'>The Global Consensus PIANO study is a national study of women with IBD and their children.</a>",
+            "<a href='https://pregnancy.ibdclinic.ca/'  target='_blank'>Sinai IBD Clinic website</a>",
+            "<a href='https://pregnancy.ibdclinic.ca/resource/ibd-medications-and-pregnancy/'  target='_blank'>Sinai IBD Clinic website page for medications and pregnancy:</a>",
+            "<a href='https://pmc.ncbi.nlm.nih.gov/articles/PMC7175923/'  target='_blank'>Scientific article on management of moderate to severe ulcerative colitis (UC):</a>",
+            "<a href='https://jamanetwork.com/journals/jama/article-abstract/2809412?utm_source=openevidence&utm_medium=referral'  target='_blank'>Scientific article on ulcerative colitis (UC) diagnosis implications, colectomy surgery, and colon cancer:</a>",
+            "<a href='https://pmc.ncbi.nlm.nih.gov/articles/PMC11346859/'  target='_blank'>Scientific article on postpartum pouchitis flare:</a>",
+            "<a href='https://journals.lww.com/dcrjournal/fulltext/10.1097/dcr.0000000000004003~patient-preferences-for-vaginal-delivery-versus-cesarean'  target='_blank'>Scientific article on delivery with J pouch</a>:",
             "<a href='https://pie.med.utoronto.ca/TVASurg/project/surgical-treatment-for-ulcerative-colitis/' target='_blank'>Click here to learn about surgical treatment options for UC (video)</a>",
             "<a href='https://pie.med.utoronto.ca/TVASurg/project/patient-teaching-vaginal-birth/' target='_blank'>Click here to visit the Vaginal Birth educational module</a>",
             "<a href='https://pie.med.utoronto.ca/TVASurg/project/pe-csection/' target='_blank'>Click here to visit the C-section educational modulee</a>"
